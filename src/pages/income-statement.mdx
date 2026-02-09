@@ -1,0 +1,280 @@
+# 如何读懂收入表（Income Statement）
+
+在具体开始讲解之前，先注意：
+1. 下面所有财报的截图数据都是 million 为单位，如果涉及到美国公司一般是 million USD，如果是中国公司，一般是 million RMB
+2. 下面所有截图财报的数据，除非特意说明，否则都是 Quarterly
+
+## 概述
+
+我们直接通过例子来学习如何读收入表，看到下面 stockanalysis.com 中给出的英伟达的收入表
+
+![NVDA income statement](/invest/income-statement/nvda-income-statement.png)
+
+让我们一个一个财务指标，从上到下，开始解释
+
+
+## Revenue
+
+Revenue 也就是收入，这里 stockanalysis 同时给出了 YoY（year on year 也就是年增长）增长，可以看到英伟达最新一个季度财报（2024-1-28 到 2024-4-28 之间）相比去年同期，收入增长为 262.12%。Cost of Revenue 也就是创造这些收入的成本，也需要给出。两个数据相减，就得到了 Gross Profit。
+
+> 参考阅读：[【财报系列：损益表篇】损益表看什么？从支出看成本结构](https://www.vicollege.com/zh-Hans-om/how-to-understand-cost-of-balance-sheet)
+
+不同阶段的公司，会有不同的成长速率，而不同阶段的公司，使用 PE 去计算估值所给的倍数也不一样，我们需要训练自己，迅速通过财报判断出一家公司处在什么阶段，这样才能更加准确地对其进行估值，才能更好地判断该公司是否符合自己的投资风格，是否是自己能力范围内该投资的公司。
+
+一家公司的生命周期可以简单地分为**快速成长期**、**成熟期**、**衰退期**：
+
+- **快速成长期**的公司，市场一般会愿意给更高的估值，比如当下（2024 年 6 月）的英伟达，每个季度英伟达的收入都在 100% 以上的增速，最近一个季度的利润（Net Income）更是增速高达 629%，市场清楚地知道英伟达未来一年还将保持高速增长，故而愿意给英伟达 70 倍的市盈率。一般而言收入增速高于 50%，算高速增长。
+- **成熟期**的公司譬如微软、Google、Meta，可以自行查找其市盈率。下面我给出了 Meta 的市盈率，可以看到 Meta 最新的市盈率为 28.84，而 2014 年 Meta 刚刚盈利不久，市盈率为 80.33。
+
+![Meta PE Ratio](/invest/income-statement/meta-pe-ration.png)
+
+再看到下图 Nu bank（一家南美高速成长的线上银行，巴西有一半的成年人拥有 Nu bank 的账户，最近几个季度的收入增速都保持在 60% 以上）的市盈率变化图，虽然 Nu bank 现在还不能称之为成熟期公司，但它的市盈率变化图很适合拿来分析，所以就选用了它。
+
+我们可以看到一家公司从快速成长期到成熟期，往往都会经历：
+
+1. **市盈率处于负数阶段，并且绝对值逐渐变小。** 快速成长期，企业，尤其是科技企业，忙着烧钱扩张（可以读一读《闪电扩张》，里面提到了很多初期利用闪电扩张快速获得市占率的案例，如 Airbnb、Uber。在初期，市占率远比利润重要，只有迅速到达网络效应的临界点，才能打败竞争对手），其往往是未盈利，同时随着盈利能力逐渐上升，可以缩小市盈率的绝对值，但依然是负的
+2. **市盈率变正，并且逐渐下降。** 此阶段，盈利能力继续上升，而估值不再明显上升，故而市盈率会慢慢下降
+
+![NU PE Ratio](/invest/income-statement/NU-PE-ration.png)
+
+再回到我们对收入表的讲解中，当收入/净利都属于快速成长阶段，这家公司可能处在快速成长期。而当增速明显放缓至 10-20%，它大概率处于成熟期。如果收入/净利只有低个位数成长，甚至负成长，则说明其处于衰退期。
+
+我个人是不看处于衰退期的公司的，因为你很难预估衰退会衰退到什么程度，也很难判断市场愿意给这样的公司什么样的价格，是用 DCF 计算出来的价格的一半，还是 80%，还是 90%？因为往往股价都会大幅跌穿 DCF 计算出来的价格，所以我一般不会碰衰退型公司。
+
+当然，上面快速成长期、成熟期、衰退期的公司的划分并不是绝对的，某些行业具有非常明显的**周期性**，比如太阳能行业、半导体行业；其实英伟达就有很明显的周期，在过去十几年中，英伟达股价被不同因素驱动着，过去挖矿潮、游戏需求的波动、云计算的兴起，都对英伟达股价有着重大的影响。所以一家周期性的公司，可能只是暂时处于周期底部，而未必是进入了衰退期。需要结合商业模式来分析。
+
+> 参考阅读：[什么是可分摊收入？以下是企业需要了解的内容](https://stripe.com/zh-hk/resources/more/what-is-ratable-revenue-what-businesses-need-to-know)
+
+
+## Gross Profit
+
+Gross Profit 毛利，下面的 Gross Margin 毛利率，计算公式则是毛利/收入。我们会用 Gross Margin + Profit Margin 来评估一家公司的护城河，举例说明下你就明白了：英伟达 Gross Margin 是 78.35%，而一年前这个数字是 64.63%，而过去的这一年正是 AI 爆发的时期，英伟达作为卖铲人，GPU 供不应求，能够大肆涨价，体现在财报上则是 Gross Margin 和 Profit Margin 明显上升。
+
+> Gross Margin / Profit Margin 的明显上升可以体现护城河的加宽，但需要注意，这需要结合商业模式长期观察，一个季度的明显上升可能是由其他因素导致的（比如宏观经济因素）
+
+**⚠️ Gross Margin / Profit Margin 并不是越高越好**，拿英伟达来举例子，因为整个 AI 产业链中，英伟达的收入某种程度上就是下游云厂商（Amazon、微软、Google）的成本，英伟达的 Profit Margin 越高，下游云厂商越有动力自己研发 GPU 来替代英伟达的 GPU。现在之所以没发生，则是因为英伟达的护城河确实太强了，没有哪家云厂商能够承担自研 GPU 性能不够好，导致输了大模型的竞争的后果。
+
+需要明白，Gross Margin / Profit Margin 只有对比来看才有意义，不同行业的 Gross Margin / Profit Margin 注定是不同的，高毛利的互联网行业肯定无法跟低毛利的汽车行业比较。
+
+我们还可以横向对比 AMD 和英伟达的 Gross Margin / Profit Margin 数据，以下是 AMD 最近几个季度的数据：
+
+![AMD Gross Margin](/invest/income-statement/amd-gross-margin.png)
+
+看到 Gross Margin，AMD 大幅落后英伟达，这暗示着同样的产品，英伟达能够卖出更高的价格，成本更低，可以体现英伟达在 GPU 市场的领导能力。但这并不是公平的比较，因为 AMD 还有很多非 GPU 业务，比如 CPU 业务，其他业务的毛利可能不如 GPU，拖累了最终数据。在使用这个数据作为参考的时候，应当对此心中有数。
+
+> 横向和其他竞争对手比较 Gross Margin / Profit Margin，可以判断公司的护城河
+
+尽管不同行业的 Gross Margin / Profit Margin 不一样，但像英伟达这样 Profit Margin 高达 57.14%，在科技行业依然是非常离谱的高，绝大多数大科技的 Profit Margin 也只有 20% - 30% 之间。
+
+大家可以试着去理解一下最新一季度美股七巨头的 Profit Margin 和 Gross Margin：
+1. 为什么有些公司和其他公司比起来更低，为什么有的更高？
+2. 市场会给净利润率更高的公司更高的估值么？上面七巨头符合这个规律么？为什么？
+
+> 记住几个不同商业模式的公司的 Profit Margin / Gross Margin 是很有用的，这能让你快速判断类似商业模式的公司，跟巨头相比做得有多好。
+
+比如收入纯广告的 Meta，毛利就能达到 81%，那么其他走广告模式的公司：
+
+![Meta Income Statement](/invest/income-statement/meta-gross-margin.png)
+
+![Meta Net Income](/invest/income-statement/meta-net-income.png)
+
+![AppLovin Margins](/invest/income-statement/meta-gross-margin2.png)
+
+比如这家公司，AppLovin Corporation (APP)，24 年 10 月 - 24 年 11 月疯涨的 AI application 公司，它拥有一个游戏分发平台，因为大模型推荐算法可以让广告的效率更高，游戏开发者 24 年 3 季度在平台上投了更多的钱，业绩继续上涨。但收入涨幅其实不算高，真正厉害的是它在收入上涨的情况下，成本、费用压根没涨 => 每一块收入就是最终的利润，所以可以看到利润最终涨了 300%。
+
+它的毛利也来到了高点 77.5%，利润率来到了 36.25%。对于互联网公司而言，一般情况下，同一商业模式下，巨头的毛利率、利润率是要比其他公司要高的，因为互联网公司会有网络效应，开发同一套系统，费用会相近，但因为互联网的边际效益可以简单认为是 0，那么服务的用户越多，毛利率自然越高。
+
+但 APP 利润率已经超越了 Meta，来到了 36.25%，它还能继续往上涨么？恐怕很难了。
+
+
+## Operating Expenses（三费）
+
+![NVDA Expense](/invest/income-statement/nvda-expense.png)
+
+接下来就是俗称"三费"的 Selling, General & Admin / Research & Development / Other Operating Expenses，从名字也能看出它们指的是哪部分的费用（所有不能归入其余两个费用的部分都会归入 Other Operating Expenses）。
+
+这三个费用相加，就可以得到 Operating Expenses，Gross Profit 减去 Operating Expenses，便得到了 Operating Income。
+
+相信很多人会有一个问题，这三个费用跟上面的 Cost of Revenue 有什么区别？
+
+简单来说，**Cost of Revenue** 是指为了生产我的产品，我需要直接花在买原料上的钱，在这里，就是英伟达为了生产 GPU 向芯片制造商（台积电）、内存供应商（镁光、三星等）以及其他制造 GPU 的上游支付的费用。
+
+而**三费**，Selling, General & Admin / Research & Development / Other Operating Expenses，则是涉及为了销售我的 GPU，花的公司管理费用、销售费用，为了研发新的下一代 GPU，公司花的研发费用。
+
+
+## Operating Income / Pretax Income / Net Income
+
+![NVDA Operating Income](/invest/income-statement/nvda-operating-income.png)
+
+接下来看到 Interest Expense/Income 和 Other Expense / Income。
+
+**Interest Expense/Income** GPT-4 的解释：
+
+利息支出和利息收入是与借入和放出资金相关的成本和收益。以下是它们是如何产生的：
+
+**利息支出：**
+利息支出发生在公司借款时，需要支付借款的利息。这可能来自几个来源：
+- **贷款：** 当公司从银行或其他金融机构贷款时，它同意偿还本金，并在此过程中支付利息。
+- **债券：** 如果公司发行债券，债券持有者会收到固定或浮动的利息支付，这是公司的利息支出。
+- **信用额度：** 使用信用额度时产生的利息也计入利息支出。
+
+**利息收入：**
+利息收入是公司从放出资金中赚取的利息。这通常包括：
+- **银行存款：** 公司在银行的存款可能会产生利息收入。
+- **债券投资：** 公司投资于其他实体的债券，从中获得的利息也计为利息收入。
+- **贷款给他人：** 如果公司将资金以贷款形式提供给其他公司或个人，从中获得的利息也视为利息收入。
+
+这些利息相关的成本和收益对公司的财务状况有直接影响，通常在财务报表的利息支出和利息收入部分反映出来。
+
+**Other Expense / Income** GPT-4 的解释：
+
+以下是一些可能计入"其他收入"的投资类型：
+1. **资本收益：** 来自于公司投资于股票、债券或其他金融工具的卖出，如果这些投资带来了盈利，这部分盈利会作为资本收益记录在"其他收入"中。
+2. **非控制性投资收益：** 如果公司对其他公司持有少数股权投资，并从中获得分红或利润分配，这些收益通常也会记录在"其他收入"下。
+3. **不动产投资收益：** 如果公司投资于不动产并从中获得租金收入或出售不动产获得的利润，这些也可以归类为"其他收入"。
+
+同样地，"其他支出"也可能包括与投资相关的费用，例如：
+- 投资损失：投资价值下降导致的损失。
+- 投资相关费用：如管理费、交易费等。
+
+因此，虽然主要的投资活动收益通常单独列出，但与公司主要业务活动无直接关系的投资收益和支出往往会被归类在"其他收入/支出"中。
+
+### PDD 的 Other Expense / Income 案例
+
+我们用财报模范生 PDD 作为例子讲解吧，看到下图。
+
+![PDD Operating Income](/invest/income-statement/pdd-operating-income.png)
+
+这个可以和 Balance Sheet 联动起来看，最新一季度，PDD 有现金及其等价物 301,245 million 元（是的，就是这么多钱，账上有 3000 亿元人民币），当季的净利润是 27,998 million 元，这一个季度它有 7,091.93 million 的其他收入（如果该项为负数，表明为收入 income，如果为正，就是费用 expense）也就是近 71 亿元的其他收入。PDD 没有投资什么公司，所以也不会有"非控制性投资收益"，所以大概率其他收入是来自资本收益的。
+
+71/3012 = 2.36%（注意这是季度收益率，转换成年化收益率为 9.78%）这个投资收益对如此体量的资金来说，已经算很高了。跟当季净利润比起来，71/279.98 = 25.36%，光是投资收益就已经占了利润的 25.36%！
+
+获得这个结论之后，我们可以做出这样的推论：
+1. PDD 现在没有需要大量投资的地方（Temu 体量比较小，并不需要太大的投资），所以这 3000 亿元不会大量减少，也可以看到 Balance Sheet，PDD 的现金及其等价物是在不断上升的。那么这 3000 亿元，如果能够维持现在的收益率，每个季度就可以保证 71 亿元的利润！但问题是这个收益率是可以维持的么？那就见仁见智了
+2. 比较上上个季度，PDD 的 Other Expense / Income，可以发现成长了 70%，但现金及其等价物只上涨了 10% 左右，也可以看出这种收益率似乎是暂时的，大概率是无法维持的。
+
+回到财报的讲解，Operating Income 减去其他费用，加上其他收入，就可以得到 Pretax Income，再扣除对应的税，就可以得到净利润 Net Income。
+
+### Gain（Loss）on Sale of Investments
+
+![PDD 年度收入表](/invest/income-statement/pdd2.png)
+
+再看到这张表，让我们看到 Gain（Loss）on Sale of Investments
+
+
+## Shares Outstanding
+
+其实到此，我们已经把收入表的主线理完了，已经对公司经营状况有了大致的了解。接下去让我们继续看看还能从收入表中获得哪些洞察。
+
+![NVDA Shares Outstanding](/invest/income-statement/nvda3.png)
+
+先解释一下 **Share Outstanding (Basic)** 和 **Share Outstanding (Diluted)** 的区别，后者的数量大于等于前者，我们直接看 GPT 给的解释：
+
+- **Share Outstanding (Basic)：** 这是公司当前实际在外流通的普通股数量。它不包括潜在的可转换证券，例如期权、可转换债券或认股权证。简单来说，这是目前股东手中持有的真实股票数量。
+- **Share Outstanding (Diluted)：** 这是在计算潜在的所有可转换证券被行使后的总股数。这包括期权、可转换债券、认股权证等可能在未来被转换为普通股的证券。如果这些可转换证券被全部转换，公司流通股数将增加，稀释每股收益（EPS）。
+
+stockanalysis.com 会把 Share Outstanding (Basic) 和 Share Outstanding (Diluted) 列在收入表中，一般收入表中不会包含这两项。
+
+重点是关注 **Shares Change**，可以看到 Shares Change 从一年前的 24700 到了现在的 24620，说明流通股数少了 80。这里我们看到 Apple 的这一部分：
+
+![Apple Shares Outstanding](/invest/income-statement/app1.png)
+
+最右边是截止到 2022-9-24 的季报，最左边是 2024-3-30 的季报，可以看到这段时间，苹果的流通股数，从 16030 减少到了 15406，减少了
+
+$$\frac{16030-15406}{16030} = 3.89\%$$
+
+### 股票回购
+
+为什么流通股数会减少呢？
+
+这是因为公司可以通过在市场上**回购**，减少流通股。回购会推高公司的股价，因为不管业绩如何，你都可以预期买盘有近千亿的资金在等着买入（苹果每年用于回购的资金高达近千亿美金）。
+
+这可以跟 Cash Flow 表中的数据合起来看，看到下图苹果 Cash Flow 表中 Share Issuance / Repurchase 一行：
+
+![Apple Share Repurchase](/invest/income-statement/apple2.png)
+
+这个数据代表苹果每个季度回购股票的资金，最新一季度苹果花了 232 亿美金来回购股票。
+
+![Apple 年度 Shares Outstanding](/invest/income-statement/apple3.png)
+
+上图是苹果的年度数据，五年内（2019-2023），苹果的流通股数减少了
+
+$$\frac{18471-15744}{18471} = 15.76\%$$
+
+这意味着苹果花了好几千亿现金来回购股票，这意味着买盘中有几千亿的资金在推动股价上涨。如果我们把时间跨度拉更长，会发现苹果几乎回购了 1/3 的流通股，这种天量资金的回购，本身就是极其强大的上涨动能。
+
+总结一下，如果一家公司在大量回购股票，这意味着：
+1. 买盘有强大的支撑，它不容易跌下去
+2. 该公司管理层认为当前公司股价被低估，当前用公司自有资金来回购是合算的
+
+### 增发股本
+
+如果相反，一家公司的流通股数在大量增加，这又意味着什么呢？
+
+下图是 PDD 近五年的数据：
+
+![PDD Shares Outstanding](/invest/income-statement/pdd3.png)
+
+可以看到 PDD 的流通股数在五年内，从 4627 增加到了 5416，流通股数增加，意味着公司向市场上发行了新的股本，往往是公司为了生产经营活动，筹集资金，对 PDD 而言，可能是为百亿补贴等营销活动筹集的资金。
+
+回购对股价往往都有提升作用，但是增发股本则有利有弊，增发股本意味着稀释你已经持有的股权，但另一方面，如果增发股本获得的资金能够改善公司经营状况，能够实现公司战略目标，又能够推动股价的上涨，所以需要具体情况具体分析。
+
+
+## EPS
+
+EPS，Earnings Per Share，也就是每股收益率，看到 EPS 的定义：
+
+> EPS = Net Income / Shares Outstanding
+
+下面有两种 EPS，分别对应着上面的 Share Outstanding (Basic) 和 Share Outstanding (Diluted) 条件下，计算出的结果：
+
+![NVDA EPS](/invest/income-statement/nvda-eps.png)
+
+EPS 是用来衡量公司盈利状况的重要指标，我们经常可以看到新闻，某某公司发布财报后，Revenue 和 EPS 符合预期，大家似乎更喜欢用 EPS 来衡量利润状况，而不是 Net Income。这是因为 EPS 会将回购/增发考虑进去，跟股价相关性更高。
+
+简单来说，Net Income 是利润总值，EPS 则是平均到每一股可以分到的利润。
+
+
+## Free Cash Flow
+
+Cash Flow 表中会详细讲
+
+
+## Dividend Per Share
+
+每股分红。假如你持有 100 股英伟达股票，100 乘以这个值就能得到你每个季度分红收入。
+
+
+## Gross Margin / Operating Margin / Profit Margin / Free Cash Flow Margin
+
+前三个已经讨论过了，Free Cash Flow Margin 后续 Cash Flow 表中再介绍。
+
+
+## Effective Tax Rate
+
+> Effective Tax Rate = (Income Tax / Pretax Income) * 100%
+
+衡量交税的比例。绝大多数情况下，这个指标都不太重要。
+
+
+## EBITDA / EBIT
+
+![NVDA EBITDA](/invest/income-statement/nvda-emitda.png)
+
+先看到 EBITDA 的英文解释：
+
+> EBITDA stands for "Earnings Before Interest, Taxes, Depreciation and Amortization." It is a commonly used measure of profitability.
+>
+> EBITDA = Net Income + Interest + Taxes + Depreciation and Amortization
+
+之所以需要引入 EBITDA 的概念，是因为 Net Income 很容易被粉饰，容易被经营状况之外的数据影响。EBITDA 的英文是 Earnings Before Interest, Taxes, Depreciation and Amortization，也就是没有去掉 Interest, Taxes, Depreciation and Amortization 的利润。
+
+这去掉的四项中，**Depreciation and Amortization** 中文是折旧和摊销，它是指生产设备、厂房、无形资产（商标专利等）等随着时间的流逝，价值会减少，一般而言会采用 N 年内，每年将其价值减去 1/N，计算入成本中。这往往因为公司采取的折旧方法不同，比如有些公司会选择 N = 5，但实际上可能第 10 年这台机器还在正常运转，故而会影响最终利润的结果。
+
+为了尽量减少这些项目对利润的影响，从而更真实地反映公司运营能力，我们就需要 EBITDA。
+
+英伟达的报表不太好说明 EBITDA，因为 Depreciation and Amortization 占比很小，看到下面星巴克的报表：
+
+![星巴克 EBITDA](/invest/income-statement/xbk.png)
+
+可以看到星巴克因为很多生产设备资产，每年的折旧 399，相比于 EBITDA，还是十分巨大的，故而 EBITDA 能更准确地反映其公司盈利能力。
