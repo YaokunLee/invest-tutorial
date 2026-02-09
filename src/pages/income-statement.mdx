@@ -2,65 +2,111 @@
 
 在具体开始讲解之前，先注意：
 1. 下面所有财报的截图数据都是 million 为单位，如果涉及到美国公司一般是 million USD，如果是中国公司，一般是 million RMB
-2. 下面所有截图财报的数据，除非特意说明，否则都是 Quarterly
+2. 下面所有财报截图的数据，除非特意说明，否则都是 Quarterly 
+    在 [StockAnalysis](https://stockanalysis.com/) 上, 财报数据可以有三种时间选项， 
+    a. Annual 按 Fiscal Year （财务年）来展示数据，那么 Fiscal Year 2025 对应的就是这家公司 25 财务年（这里需要插入一下，财务年不等于日历年，不同公司财务年开始时间不一样，有的公司可能是 7 月开始财务年，于是 FY 25 实际上是 24 年 7 月 -  25 年 7 月的财务数据）的数据，因此，可能没有包括最新的已经公布的季度的财务数据
+    b. Quarterly 每个财务季度的数据，以季度为时间跨度
+    c. TTM  展示的是过去 4 个季度的财务数据，包含了最新的季度财务数据，但是依然是以年为时间跨度来展示数据的
 
 ## 概述
 
-我们直接通过例子来学习如何读收入表，看到下面 stockanalysis.com 中给出的英伟达的收入表
+我们直接通过例子来学习如何读收入表，看到下面 [StockAnalysis](https://stockanalysis.com/stocks/nvda/financials/) 中给出的英伟达的收入表
+<div style={{textAlign: 'center'}}>
+![NVDA 截止 2026-2-9 Quarterly 收入表](/invest/income-statement/nvda-latest.png)
+</div>
 
-![NVDA income statement](/invest/income-statement/nvda-income-statement.png)
 
 让我们一个一个财务指标，从上到下，开始解释
 
 
 ## Revenue
 
-Revenue 也就是收入，这里 stockanalysis 同时给出了 YoY（year on year 也就是年增长）增长，可以看到英伟达最新一个季度财报（2024-1-28 到 2024-4-28 之间）相比去年同期，收入增长为 262.12%。Cost of Revenue 也就是创造这些收入的成本，也需要给出。两个数据相减，就得到了 Gross Profit。
+Revenue 也就是收入，这里 stockanalysis 同时给出了 YoY（year on year 也就是年增长）增长，可以看到英伟达最新一个季度财报（2025-7-28 到 2025-10-26 之间）相比去年同期，收入增长为 62.49%。
+
+Cost of Revenue 也就是创造这些收入的**直接**成本。注意这里的关键词是"直接"——Cost of Revenue 只包含那些与生产产品、交付服务**直接相关**的支出。换句话说，**如果这笔钱不花，产品就造不出来、服务就交付不了，那它就属于 Cost of Revenue。**
+
+以英伟达为例，它的 Cost of Revenue 主要包括：
+- 向台积电采购芯片晶圆的费用
+- 封装、测试等制造环节的费用
+- 生产相关的人工成本和设备折旧
+
+| 属于 Cost of Revenue（直接成本） | 不属于 Cost of Revenue（间接成本） |
+|---|---|
+| 原材料、零部件采购 | 研发费用（R&D） |
+| 生产制造的人工费 | 销售和市场推广费用 |
+| 工厂设备折旧、水电 | 管理层薪酬、办公室租金 |
+| 物流运输成本 | 法务、财务等行政开支 |
+
+右边这些间接成本，虽然也是公司的支出，但它们**并非直接用于生产产品**，所以不计入 Cost of Revenue，而是归入下面会讲到的 Operating Expenses（三费）中。
+
+两个数据相减，就得到了 Gross Profit。
 
 > 参考阅读：[【财报系列：损益表篇】损益表看什么？从支出看成本结构](https://www.vicollege.com/zh-Hans-om/how-to-understand-cost-of-balance-sheet)
 
-不同阶段的公司，会有不同的成长速率，而不同阶段的公司，使用 PE 去计算估值所给的倍数也不一样，我们需要训练自己，迅速通过财报判断出一家公司处在什么阶段，这样才能更加准确地对其进行估值，才能更好地判断该公司是否符合自己的投资风格，是否是自己能力范围内该投资的公司。
+不同阶段的公司，会有不同的成长速率，而不同阶段的公司，使用 PE （如果你不懂什么是 PE，可以先问问 AI 再来理解下面的事情） 去计算估值所给的倍数也不一样，我们需要训练自己，迅速通过财报判断出一家公司处在什么阶段，这样才能更加准确地对其进行估值，才能更好地判断该公司是否符合自己的投资风格，是否是自己能力范围内该投资的公司。
 
-一家公司的生命周期可以简单地分为**快速成长期**、**成熟期**、**衰退期**：
+一家公司的生命周期可以**粗略地**分为**快速成长期**、**成熟期**、**衰退期**。需要注意，这个分类只是一个简化的思维框架，现实中很多公司并不会严格按照这个路径走——有的公司可能在成熟期突然找到第二增长曲线重回高速增长（比如 Meta 在 2023 年的"效率之年"），有的公司可能在快速成长的同时利润率很低。不必纠结于精确的分类，重要的是通过财报数据大致判断公司当前所处的阶段，以此来指导你的估值方法：
 
-- **快速成长期**的公司，市场一般会愿意给更高的估值，比如当下（2024 年 6 月）的英伟达，每个季度英伟达的收入都在 100% 以上的增速，最近一个季度的利润（Net Income）更是增速高达 629%，市场清楚地知道英伟达未来一年还将保持高速增长，故而愿意给英伟达 70 倍的市盈率。一般而言收入增速高于 50%，算高速增长。
-- **成熟期**的公司譬如微软、Google、Meta，可以自行查找其市盈率。下面我给出了 Meta 的市盈率，可以看到 Meta 最新的市盈率为 28.84，而 2014 年 Meta 刚刚盈利不久，市盈率为 80.33。
+- **快速成长期**的公司，市场一般会愿意给更高的估值，比如 FY 2024 的英伟达就是很典型的快速成长公司，收入增速 125.86%，利润（Net Income）增速更是达 581.32%，市场清楚地知道英伟达未来一年还将保持高速增长，故而那个时候愿意给英伟达 70 倍甚至更高的市盈率。一般而言收入增速高于 50%，算高速增长。
+下图显示了 Meta 过去 10 年的 PE 变化，10 年以前 Meta 也是高速成长的公司，PE 高达 50 以上
 
-![Meta PE Ratio](/invest/income-statement/meta-pe-ration.png)
+- **成熟期**的公司譬如微软、Google、Meta，可以自行查找其市盈率。下面 Meta 的市盈率，可以看到 Meta 最新的市盈率为 28 左右。
 
-再看到下图 Nu bank（一家南美高速成长的线上银行，巴西有一半的成年人拥有 Nu bank 的账户，最近几个季度的收入增速都保持在 60% 以上）的市盈率变化图，虽然 Nu bank 现在还不能称之为成熟期公司，但它的市盈率变化图很适合拿来分析，所以就选用了它。
+<div style={{textAlign: 'center'}}>
+![Meta PE Ratio](/invest/income-statement/meta-pe-latest.png)
+</div>
 
-我们可以看到一家公司从快速成长期到成熟期，往往都会经历：
+再看到下图 Nu bank（一家南美高速成长的线上银行，巴西有一半的成年人拥有 Nu bank 的账户）的市盈率变化图。下面这张图是 2024 年年中截取的，当时 Nu bank 最近几个季度的收入增速都保持在 60% 以上，还不能称之为成熟期公司，但它的市盈率变化图非常适合用来展示一家公司从亏损走向盈利的 PE 变化过程，所以选用了它。
 
-1. **市盈率处于负数阶段，并且绝对值逐渐变小。** 快速成长期，企业，尤其是科技企业，忙着烧钱扩张（可以读一读《闪电扩张》，里面提到了很多初期利用闪电扩张快速获得市占率的案例，如 Airbnb、Uber。在初期，市占率远比利润重要，只有迅速到达网络效应的临界点，才能打败竞争对手），其往往是未盈利，同时随着盈利能力逐渐上升，可以缩小市盈率的绝对值，但依然是负的
+> 注意：截图反映的是 2024 年年中的数据，Nu bank 当前的经营状况和市盈率可能已经发生了变化，建议读者自行查阅最新数据。
+
+<div style={{textAlign: 'center'}}>
+![NU PE Ratio](/invest/income-statement/NU-PE-ration.png)
+</div>
+
+从这张图中，我们可以看到一家公司从快速成长期到成熟期，往往都会经历：
+
+1. **市盈率处于负数阶段，并且绝对值逐渐变小。** 快速成长期，企业，尤其是科技企业，忙着烧钱扩张（可以读一读《闪电扩张》，里面提到了很多初期利用闪电扩张快速获得市占率的案例，如 Airbnb、Uber。在初期，市占率远比利润重要，只有迅速到达网络效应的临界点，才能打败竞争对手），公司往往未盈利，同时随着盈利能力逐渐上升，可以缩小市盈率的绝对值，但依然是负的
 2. **市盈率变正，并且逐渐下降。** 此阶段，盈利能力继续上升，而估值不再明显上升，故而市盈率会慢慢下降
 
-![NU PE Ratio](/invest/income-statement/NU-PE-ration.png)
 
 再回到我们对收入表的讲解中，当收入/净利都属于快速成长阶段，这家公司可能处在快速成长期。而当增速明显放缓至 10-20%，它大概率处于成熟期。如果收入/净利只有低个位数成长，甚至负成长，则说明其处于衰退期。
 
 我个人是不看处于衰退期的公司的，因为你很难预估衰退会衰退到什么程度，也很难判断市场愿意给这样的公司什么样的价格，是用 DCF 计算出来的价格的一半，还是 80%，还是 90%？因为往往股价都会大幅跌穿 DCF 计算出来的价格，所以我一般不会碰衰退型公司。
 
-当然，上面快速成长期、成熟期、衰退期的公司的划分并不是绝对的，某些行业具有非常明显的**周期性**，比如太阳能行业、半导体行业；其实英伟达就有很明显的周期，在过去十几年中，英伟达股价被不同因素驱动着，过去挖矿潮、游戏需求的波动、云计算的兴起，都对英伟达股价有着重大的影响。所以一家周期性的公司，可能只是暂时处于周期底部，而未必是进入了衰退期。需要结合商业模式来分析。
+当然，上面快速成长期、成熟期、衰退期的公司的划分并不是绝对的，某些行业具有非常明显的**周期性**，比如太阳能行业、半导体行业；其实英伟达就有很明显的周期，在过去十几年中，英伟达股价被不同因素驱动着，过去挖矿潮、游戏需求的波动、云计算的兴起，都对英伟达股价有着重大的影响。所以一家周期性的公司，可能只是暂时处于周期底部，而未必是进入了衰退期。需要结合商业模式来分析。关于周期性行业的更多讨论，可以阅读[存储行业：典型的周期行业](/cycle)。
 
 > 参考阅读：[什么是可分摊收入？以下是企业需要了解的内容](https://stripe.com/zh-hk/resources/more/what-is-ratable-revenue-what-businesses-need-to-know)
 
 
 ## Gross Profit
 
-Gross Profit 毛利，下面的 Gross Margin 毛利率，计算公式则是毛利/收入。我们会用 Gross Margin + Profit Margin 来评估一家公司的护城河，举例说明下你就明白了：英伟达 Gross Margin 是 78.35%，而一年前这个数字是 64.63%，而过去的这一年正是 AI 爆发的时期，英伟达作为卖铲人，GPU 供不应求，能够大肆涨价，体现在财报上则是 Gross Margin 和 Profit Margin 明显上升。
+Gross Profit 毛利，下面的 Gross Margin 毛利率，计算公式则是毛利/收入。我们会用 Gross Margin + Profit Margin 来评估一家公司的护城河，举例说明下你就明白了：英伟达最新一季度（截至 2025 年 Q3）的 Gross Margin 是 73.41%，而在 AI 爆发前（2023 年 Q1）这个数字仅为 64.63%，AI 爆发期间一度飙升至 78.35%（2024 年 Q1）。过去这两年正是 AI 爆发的时期，英伟达作为卖铲人，GPU 供不应求，能够大肆涨价，体现在财报上则是 Gross Margin 和 Profit Margin 相比 LLM 时代前明显上升。尽管从峰值有所回落，但 73.41% 仍远高于 AI 爆发前的水平。
 
 > Gross Margin / Profit Margin 的明显上升可以体现护城河的加宽，但需要注意，这需要结合商业模式长期观察，一个季度的明显上升可能是由其他因素导致的（比如宏观经济因素）
 
-**⚠️ Gross Margin / Profit Margin 并不是越高越好**，拿英伟达来举例子，因为整个 AI 产业链中，英伟达的收入某种程度上就是下游云厂商（Amazon、微软、Google）的成本，英伟达的 Profit Margin 越高，下游云厂商越有动力自己研发 GPU 来替代英伟达的 GPU。现在之所以没发生，则是因为英伟达的护城河确实太强了，没有哪家云厂商能够承担自研 GPU 性能不够好，导致输了大模型的竞争的后果。
+**⚠️ 不过，如果一家公司的 Gross Margin 长期维持在很高的水平，可能存在一点隐忧。** 拿英伟达来举例子，整个 AI 产业链中，英伟达的收入某种程度上就是下游云厂商（Amazon、微软、Google）的成本，英伟达的利润率越高，下游云厂商就越有动力自己研发 GPU 来替代英伟达。目前之所以没发生，是因为英伟达的护城河确实太强了，没有哪家云厂商能够承担自研 GPU 性能不够好、导致输了大模型竞争的后果。但这个隐忧始终存在——过高的利润率本身就是在激励你的客户寻找替代方案。
 
 需要明白，Gross Margin / Profit Margin 只有对比来看才有意义，不同行业的 Gross Margin / Profit Margin 注定是不同的，高毛利的互联网行业肯定无法跟低毛利的汽车行业比较。
 
-我们还可以横向对比 AMD 和英伟达的 Gross Margin / Profit Margin 数据，以下是 AMD 最近几个季度的数据：
+我们可以横向对比 AMD 和英伟达的 Gross Margin 数据（注意：英伟达的财务季度与日历季度有约一个月的偏移，下表按近似日历季度对齐）：
 
-![AMD Gross Margin](/invest/income-statement/amd-gross-margin.png)
+| 季度 | AMD | NVDA |
+|------|-----|------|
+| Q1 2023 | 49.77% | 64.63% |
+| Q2 2023 | 49.54% | 70.05% |
+| Q3 2023 | 50.98% | 73.95% |
+| Q4 2023 | 50.68% | 75.97% |
+| Q1 2024 | 50.98% | 78.35% |
+| Q2 2024 | 53.04% | 75.15% |
+| Q3 2024 | 53.56% | 74.56% |
+| Q4 2024 | 53.98% | 73.03% |
+| Q1 2025 | 53.60% | 60.52% |
+| Q2 2025 | 43.19% | 72.42% |
+| Q3 2025 | 54.51% | 73.41% |
+| Q4 2025 | 56.84% | - |
 
-看到 Gross Margin，AMD 大幅落后英伟达，这暗示着同样的产品，英伟达能够卖出更高的价格，成本更低，可以体现英伟达在 GPU 市场的领导能力。但这并不是公平的比较，因为 AMD 还有很多非 GPU 业务，比如 CPU 业务，其他业务的毛利可能不如 GPU，拖累了最终数据。在使用这个数据作为参考的时候，应当对此心中有数。
+可以看到，AMD 的 Gross Margin 长期在 50% 左右徘徊，而英伟达则稳定在 70%+ 的水平，两者差距显著。这暗示着同样的产品，英伟达能够卖出更高的价格，成本更低，体现了英伟达在 GPU 市场的定价权和领导能力。但这并不是完全公平的比较，因为 AMD 还有很多非 GPU 业务（比如 CPU 业务），其他业务的毛利可能不如 GPU，拖累了最终数据。在使用这个数据作为参考的时候，应当对此心中有数。
 
 > 横向和其他竞争对手比较 Gross Margin / Profit Margin，可以判断公司的护城河
 
@@ -72,24 +118,12 @@ Gross Profit 毛利，下面的 Gross Margin 毛利率，计算公式则是毛�
 
 > 记住几个不同商业模式的公司的 Profit Margin / Gross Margin 是很有用的，这能让你快速判断类似商业模式的公司，跟巨头相比做得有多好。
 
-比如收入纯广告的 Meta，毛利就能达到 81%，那么其他走广告模式的公司：
-
-![Meta Income Statement](/invest/income-statement/meta-gross-margin.png)
-
-![Meta Net Income](/invest/income-statement/meta-net-income.png)
-
-![AppLovin Margins](/invest/income-statement/meta-gross-margin2.png)
-
-比如这家公司，AppLovin Corporation (APP)，24 年 10 月 - 24 年 11 月疯涨的 AI application 公司，它拥有一个游戏分发平台，因为大模型推荐算法可以让广告的效率更高，游戏开发者 24 年 3 季度在平台上投了更多的钱，业绩继续上涨。但收入涨幅其实不算高，真正厉害的是它在收入上涨的情况下，成本、费用压根没涨 => 每一块收入就是最终的利润，所以可以看到利润最终涨了 300%。
-
-它的毛利也来到了高点 77.5%，利润率来到了 36.25%。对于互联网公司而言，一般情况下，同一商业模式下，巨头的毛利率、利润率是要比其他公司要高的，因为互联网公司会有网络效应，开发同一套系统，费用会相近，但因为互联网的边际效益可以简单认为是 0，那么服务的用户越多，毛利率自然越高。
-
-但 APP 利润率已经超越了 Meta，来到了 36.25%，它还能继续往上涨么？恐怕很难了。
-
 
 ## Operating Expenses（三费）
 
+<div style={{textAlign: 'center'}}>
 ![NVDA Expense](/invest/income-statement/nvda-expense.png)
+</div>
 
 接下来就是俗称"三费"的 Selling, General & Admin / Research & Development / Other Operating Expenses，从名字也能看出它们指的是哪部分的费用（所有不能归入其余两个费用的部分都会归入 Other Operating Expenses）。
 
@@ -101,10 +135,36 @@ Gross Profit 毛利，下面的 Gross Margin 毛利率，计算公式则是毛�
 
 而**三费**，Selling, General & Admin / Research & Development / Other Operating Expenses，则是涉及为了销售我的 GPU，花的公司管理费用、销售费用，为了研发新的下一代 GPU，公司花的研发费用。
 
+### 从营销费用看行业竞争
+
+三费中的营销费用（Selling & Marketing Expenses）占收入的比例，是观察行业竞争格局变化的一个很好的切入点。**当一个行业的竞争加剧时，企业往往需要投入更多的营销费用来维持或争夺市场份额，体现在财报上就是营销费用占收入的比例上升。**
+
+以阿里巴巴（BABA）为例。一方面，电商行业本身竞争加剧（拼多多、抖音电商等），阿里需要更多营销投入来守住市场份额；另一方面，更主要的原因是阿里正在大举进攻本地生活领域——为了在淘宝内把"闪购"（即时零售/外卖）业务做起来，阿里砸下了几百亿的补贴和营销费用，直接跟美团打价格战，大量发放外卖优惠券来抢占用户心智。
+
+<div style={{textAlign: 'center'}}>
+![阿里巴巴营销费用占比](/invest/income-statement/baba-marketing-expense.png)
+</div>
+
+从上图可以清晰地看到，阿里巴巴的营销费用占比从 2024 年 Q3 的 13.73% 飙升到 2025 年 Q3 的 26.84%，短短一年内翻了近一倍。这意味着阿里巴巴每赚 100 块钱的收入，就要花近 27 块钱在营销上，而一年前这个数字只有不到 14 块。**营销费用的飙升直接侵蚀了利润**，这也是为什么阿里巴巴虽然收入还在增长，但利润表现却不尽如人意的原因之一。
+
+反过来，我们看英伟达的情况。英伟达不单独披露营销费用，营销被合并在 SGA（Selling, General & Administrative）中，但即便用这个更宽泛的口径，趋势也非常明显：
+
+<div style={{textAlign: 'center'}}>
+![英伟达 SGA 费用占比](/invest/income-statement/nvda-marketing-expense.png)
+</div>
+
+同一时期，英伟达的 SGA 费用占收入比例从 2.56% 持续下降到 1.99%。这并不是因为英伟达削减了销售费用——实际上 SGA 的绝对金额也在增长——而是因为收入增长的速度远超费用增长。英伟达在 GPU 市场几乎没有对手，不需要花大价钱打价格战或做营销补贴，产品本身就供不应求。这就是竞争格局向好的典型体现。
+
+> 两家公司，同一时期，一个营销费用占比从 14% 飙到 27%，一个从 2.6% 降到 2%。仅凭这一个指标，你就能感受到两家公司面临的竞争格局截然不同。
+
+我们经常说护城河，但不能光凭感觉去说一家公司的护城河有多深，得从数据里找证据。营销费用占比的变化趋势，就是一种量化判断护城河深浅的方式。
+
 
 ## Operating Income / Pretax Income / Net Income
 
+<div style={{textAlign: 'center'}}>
 ![NVDA Operating Income](/invest/income-statement/nvda-operating-income.png)
+</div>
 
 接下来看到 Interest Expense/Income 和 Other Expense / Income。
 
@@ -143,7 +203,9 @@ Gross Profit 毛利，下面的 Gross Margin 毛利率，计算公式则是毛�
 
 我们用财报模范生 PDD 作为例子讲解吧，看到下图。
 
+<div style={{textAlign: 'center'}}>
 ![PDD Operating Income](/invest/income-statement/pdd-operating-income.png)
+</div>
 
 这个可以和 Balance Sheet 联动起来看，最新一季度，PDD 有现金及其等价物 301,245 million 元（是的，就是这么多钱，账上有 3000 亿元人民币），当季的净利润是 27,998 million 元，这一个季度它有 7,091.93 million 的其他收入（如果该项为负数，表明为收入 income，如果为正，就是费用 expense）也就是近 71 亿元的其他收入。PDD 没有投资什么公司，所以也不会有"非控制性投资收益"，所以大概率其他收入是来自资本收益的。
 
@@ -157,7 +219,9 @@ Gross Profit 毛利，下面的 Gross Margin 毛利率，计算公式则是毛�
 
 ### Gain（Loss）on Sale of Investments
 
+<div style={{textAlign: 'center'}}>
 ![PDD 年度收入表](/invest/income-statement/pdd2.png)
+</div>
 
 再看到这张表，让我们看到 Gain（Loss）on Sale of Investments
 
@@ -166,7 +230,9 @@ Gross Profit 毛利，下面的 Gross Margin 毛利率，计算公式则是毛�
 
 其实到此，我们已经把收入表的主线理完了，已经对公司经营状况有了大致的了解。接下去让我们继续看看还能从收入表中获得哪些洞察。
 
+<div style={{textAlign: 'center'}}>
 ![NVDA Shares Outstanding](/invest/income-statement/nvda3.png)
+</div>
 
 先解释一下 **Share Outstanding (Basic)** 和 **Share Outstanding (Diluted)** 的区别，后者的数量大于等于前者，我们直接看 GPT 给的解释：
 
@@ -177,7 +243,9 @@ stockanalysis.com 会把 Share Outstanding (Basic) 和 Share Outstanding (Dilute
 
 重点是关注 **Shares Change**，可以看到 Shares Change 从一年前的 24700 到了现在的 24620，说明流通股数少了 80。这里我们看到 Apple 的这一部分：
 
+<div style={{textAlign: 'center'}}>
 ![Apple Shares Outstanding](/invest/income-statement/app1.png)
+</div>
 
 最右边是截止到 2022-9-24 的季报，最左边是 2024-3-30 的季报，可以看到这段时间，苹果的流通股数，从 16030 减少到了 15406，减少了
 
@@ -191,11 +259,15 @@ $$\frac{16030-15406}{16030} = 3.89\%$$
 
 这可以跟 Cash Flow 表中的数据合起来看，看到下图苹果 Cash Flow 表中 Share Issuance / Repurchase 一行：
 
+<div style={{textAlign: 'center'}}>
 ![Apple Share Repurchase](/invest/income-statement/apple2.png)
+</div>
 
 这个数据代表苹果每个季度回购股票的资金，最新一季度苹果花了 232 亿美金来回购股票。
 
+<div style={{textAlign: 'center'}}>
 ![Apple 年度 Shares Outstanding](/invest/income-statement/apple3.png)
+</div>
 
 上图是苹果的年度数据，五年内（2019-2023），苹果的流通股数减少了
 
@@ -213,7 +285,9 @@ $$\frac{18471-15744}{18471} = 15.76\%$$
 
 下图是 PDD 近五年的数据：
 
+<div style={{textAlign: 'center'}}>
 ![PDD Shares Outstanding](/invest/income-statement/pdd3.png)
+</div>
 
 可以看到 PDD 的流通股数在五年内，从 4627 增加到了 5416，流通股数增加，意味着公司向市场上发行了新的股本，往往是公司为了生产经营活动，筹集资金，对 PDD 而言，可能是为百亿补贴等营销活动筹集的资金。
 
@@ -228,7 +302,9 @@ EPS，Earnings Per Share，也就是每股收益率，看到 EPS 的定义：
 
 下面有两种 EPS，分别对应着上面的 Share Outstanding (Basic) 和 Share Outstanding (Diluted) 条件下，计算出的结果：
 
+<div style={{textAlign: 'center'}}>
 ![NVDA EPS](/invest/income-statement/nvda-eps.png)
+</div>
 
 EPS 是用来衡量公司盈利状况的重要指标，我们经常可以看到新闻，某某公司发布财报后，Revenue 和 EPS 符合预期，大家似乎更喜欢用 EPS 来衡量利润状况，而不是 Net Income。这是因为 EPS 会将回购/增发考虑进去，跟股价相关性更高。
 
@@ -259,7 +335,9 @@ Cash Flow 表中会详细讲
 
 ## EBITDA / EBIT
 
+<div style={{textAlign: 'center'}}>
 ![NVDA EBITDA](/invest/income-statement/nvda-emitda.png)
+</div>
 
 先看到 EBITDA 的英文解释：
 
@@ -275,6 +353,8 @@ Cash Flow 表中会详细讲
 
 英伟达的报表不太好说明 EBITDA，因为 Depreciation and Amortization 占比很小，看到下面星巴克的报表：
 
+<div style={{textAlign: 'center'}}>
 ![星巴克 EBITDA](/invest/income-statement/xbk.png)
+</div>
 
 可以看到星巴克因为很多生产设备资产，每年的折旧 399，相比于 EBITDA，还是十分巨大的，故而 EBITDA 能更准确地反映其公司盈利能力。
