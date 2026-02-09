@@ -1,37 +1,32 @@
 import Image from 'next/image';
-import codingMayImage from 'public/coding-may.jpg';
-import qrcodeImage from 'public/qrcode_for_coding_world.avif';
 
 export default function FollowMe() {
   return <>
-    <h2 class="text-2xl font-semibold mt-6 mb-4">声明</h2>
-    <p>之前，有网友表示，这个项目挺好的，对他有帮助，来表示感谢！</p>
-    <p class="mt-5">
-      在此声明下，本项目只是一个中文翻译版本，纯粹的 “为爱发电了”，原版权仍归 Next.js 官方教程所有，本翻译项目无任何商业行为，也不接受任何金钱上的捐赠哈。
-      如果真的感觉有帮助，就点个 Star 吧，关注下 “编程界” 公众号，上面平常也在分享 Next.js 相关内容。
-    </p>
+    <h2 class="text-2xl font-semibold mt-6 mb-4">关注我</h2>
+    <p>如果觉得本教程对你有帮助，欢迎关注我的社交媒体账号。</p>
 
-    <div class="flex mt-5">
+    {/* TODO: 将社交媒体二维码图片放到 public/ 目录后，取消下方注释并更新 src 和文字说明 */}
+    {/* <div class="flex mt-5">
       <div class="w-1/2 items-center flex flex-col pr-2">
         <Image
-          src={codingMayImage}
-          className="mb-4 rounded-md shadow-lg mb-5 rounded-md shadow-lg"
-          alt="扫码备注 “nextjs” 加入 Next.js 中文技术交流群"
+          src="/qrcode-1.png"
+          className="mb-4 rounded-md shadow-lg"
+          alt="扫码关注"
           width={200}
           height={200}
         />
-        <p class="nx-text-xs font-bold text-center">扫码备注「<b>nextjs</b>」<br/>加入 Next.js 中文技术交流群</p>
+        <p class="nx-text-xs font-bold text-center">扫码关注</p>
       </div>
       <div class="w-1/2 items-center flex flex-col pl-2">
         <Image
-          src={qrcodeImage}
+          src="/qrcode-2.png"
           className="mb-5 rounded-md shadow-lg"
-          alt="关注公众号编程界获取最新 Next.js 开发资讯"
+          alt="扫码关注"
           width={200}
           height={200}
         />
-        <p class="nx-text-xs font-bold text-center">关注公众号「<b>编程界</b>」<br/>获取最新 Next.js 开发资讯</p>
+        <p class="nx-text-xs font-bold text-center">扫码关注</p>
       </div>
-    </div>
+    </div> */}
   </>
 }
