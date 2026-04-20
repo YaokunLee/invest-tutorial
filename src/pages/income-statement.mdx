@@ -2,11 +2,10 @@
 
 在具体开始讲解之前，先注意：
 1. 下面所有财报的截图数据都是 million 为单位，如果涉及到美国公司一般是 million USD，如果是中国公司，一般是 million RMB
-2. 下面所有财报截图的数据，除非特意说明，否则都是 Quarterly 
-    在 [StockAnalysis](https://stockanalysis.com/) 上, 财报数据可以有三种时间选项， 
-    a. Annual 按 Fiscal Year （财务年）来展示数据，那么 Fiscal Year 2025 对应的就是这家公司 25 财务年（这里需要插入一下，财务年不等于日历年，不同公司财务年开始时间不一样，有的公司可能是 7 月开始财务年，于是 FY 25 实际上是 24 年 7 月 -  25 年 7 月的财务数据）的数据，因此，可能没有包括最新的已经公布的季度的财务数据
-    b. Quarterly 每个财务季度的数据，以季度为时间跨度
-    c. TTM  展示的是过去 4 个季度的财务数据，包含了最新的季度财务数据，但是依然是以年为时间跨度来展示数据的
+2. 下面所有财报截图的数据，除非特意说明，否则都是 Quarterly。在 [StockAnalysis](https://stockanalysis.com/) 上，财报数据可以有三种时间选项：
+   - **Annual**：按 Fiscal Year（财务年）来展示数据。需要注意，财务年不等于日历年，不同公司财务年开始时间不一样，比如有的公司 7 月开始财务年，那么 FY 25 实际上是 24 年 7 月 - 25 年 7 月的财务数据。因此，Annual 数据可能没有包括最新的已经公布的季度财务数据
+   - **Quarterly**：每个财务季度的数据，以季度为时间跨度
+   - **TTM**（Trailing Twelve Months）：展示的是过去 4 个季度的财务数据，包含了最新的季度财务数据，但依然是以年为时间跨度来展示
 
 ## 概述
 
@@ -45,52 +44,28 @@ Cost of Revenue 也就是创造这些收入的**直接**成本。注意这里的
 两个数据相减，就得到了 Gross Profit。
 
 > 参考阅读：[【财报系列：损益表篇】损益表看什么？从支出看成本结构](https://www.vicollege.com/zh-Hans-om/how-to-understand-cost-of-balance-sheet)
-
-不同阶段的公司，会有不同的成长速率，而不同阶段的公司，使用 PE （如果你不懂什么是 PE，可以先问问 AI 再来理解下面的事情） 去计算估值所给的倍数也不一样，我们需要训练自己，迅速通过财报判断出一家公司处在什么阶段，这样才能更加准确地对其进行估值，才能更好地判断该公司是否符合自己的投资风格，是否是自己能力范围内该投资的公司。
-
-一家公司的生命周期可以**粗略地**分为**快速成长期**、**成熟期**、**衰退期**。需要注意，这个分类只是一个简化的思维框架，现实中很多公司并不会严格按照这个路径走——有的公司可能在成熟期突然找到第二增长曲线重回高速增长（比如 Meta 在 2023 年的"效率之年"），有的公司可能在快速成长的同时利润率很低。不必纠结于精确的分类，重要的是通过财报数据大致判断公司当前所处的阶段，以此来指导你的估值方法：
-
-- **快速成长期**的公司，市场一般会愿意给更高的估值，比如 FY 2024 的英伟达就是很典型的快速成长公司，收入增速 125.86%，利润（Net Income）增速更是达 581.32%，市场清楚地知道英伟达未来一年还将保持高速增长，故而那个时候愿意给英伟达 70 倍甚至更高的市盈率。一般而言收入增速高于 50%，算高速增长。
-下图显示了 Meta 过去 10 年的 PE 变化，10 年以前 Meta 也是高速成长的公司，PE 高达 50 以上
-
-- **成熟期**的公司譬如微软、Google、Meta，可以自行查找其市盈率。下面 Meta 的市盈率，可以看到 Meta 最新的市盈率为 28 左右。
-
-
-<br />
-<figure className="flex flex-col items-center">
-  <img src="/invest/income-statement/meta-pe-latest.png" alt="Meta PE Ratio" />
-  <figcaption className="text-center text-sm text-gray-500 mt-2">Meta 过去 10 年的市盈率（PE）变化，成熟期 PE 稳定在 28 左右</figcaption>
-</figure>
-
-再看到下图 Nu bank（一家南美高速成长的线上银行，巴西有一半的成年人拥有 Nu bank 的账户）的市盈率变化图。下面这张图是 2024 年年中截取的，当时 Nu bank 最近几个季度的收入增速都保持在 60% 以上，还不能称之为成熟期公司，但它的市盈率变化图非常适合用来展示一家公司从亏损走向盈利的 PE 变化过程，所以选用了它。
-
-> 注意：截图反映的是 2024 年年中的数据，Nu bank 当前的经营状况和市盈率可能已经发生了变化，建议读者自行查阅最新数据。
-
-
-<br />
-<figure className="flex flex-col items-center">
-  <img src="/invest/income-statement/NU-PE-ration.png" alt="NU PE Ratio" />
-  <figcaption className="text-center text-sm text-gray-500 mt-2">Nu Bank 的市盈率变化：从亏损期的负 PE 逐步转正并下降，展示了公司从成长到成熟的典型路径</figcaption>
-</figure>
-
-从这张图中，我们可以看到一家公司从快速成长期到成熟期，往往都会经历：
-
-1. **市盈率处于负数阶段，并且绝对值逐渐变小。** 快速成长期，企业，尤其是科技企业，忙着烧钱扩张（可以读一读《闪电扩张》，里面提到了很多初期利用闪电扩张快速获得市占率的案例，如 Airbnb、Uber。在初期，市占率远比利润重要，只有迅速到达网络效应的临界点，才能打败竞争对手），公司往往未盈利，同时随着盈利能力逐渐上升，可以缩小市盈率的绝对值，但依然是负的
-2. **市盈率变正，并且逐渐下降。** 此阶段，盈利能力继续上升，而估值不再明显上升，故而市盈率会慢慢下降
-
-
-再回到我们对收入表的讲解中，当收入/净利都属于快速成长阶段，这家公司可能处在快速成长期。而当增速明显放缓至 10-20%，它大概率处于成熟期。如果收入/净利只有低个位数成长，甚至负成长，则说明其处于衰退期。
-
-我个人是不看处于衰退期的公司的，因为你很难预估衰退会衰退到什么程度，也很难判断市场愿意给这样的公司什么样的价格，是用 DCF 计算出来的价格的一半，还是 80%，还是 90%？因为往往股价都会大幅跌穿 DCF 计算出来的价格，所以我一般不会碰衰退型公司。
-
-当然，上面快速成长期、成熟期、衰退期的公司的划分并不是绝对的，某些行业具有非常明显的**周期性**，比如太阳能行业、半导体行业；其实英伟达就有很明显的周期，在过去十几年中，英伟达股价被不同因素驱动着，过去挖矿潮、游戏需求的波动、云计算的兴起，都对英伟达股价有着重大的影响。所以一家周期性的公司，可能只是暂时处于周期底部，而未必是进入了衰退期。需要结合商业模式来分析。关于周期性行业的更多讨论，可以阅读[存储行业：典型的周期行业](/cycle)。
-
+>
 > 参考阅读：[什么是可分摊收入？以下是企业需要了解的内容](https://stripe.com/zh-hk/resources/more/what-is-ratable-revenue-what-businesses-need-to-know)
 
 
-## Gross Profit
+通过观察收入增速，我们可以判断一家公司处于什么阶段（快速成长期、成熟期、衰退期），从而选择合适的估值方法。详细讨论请阅读：[从收入增速判断公司所处阶段](/company-lifecycle)。
 
-Gross Profit 毛利，下面的 Gross Margin 毛利率，计算公式则是毛利/收入。我们会用 Gross Margin + Profit Margin 来评估一家公司的护城河，举例说明下你就明白了：英伟达最新一季度（截至 2025 年 Q3）的 Gross Margin 是 73.41%，而在 AI 爆发前（2023 年 Q1）这个数字仅为 64.63%，AI 爆发期间一度飙升至 78.35%（2024 年 Q1）。过去这两年正是 AI 爆发的时期，英伟达作为卖铲人，GPU 供不应求，能够大肆涨价，体现在财报上则是 Gross Margin 和 Profit Margin 相比 LLM 时代前明显上升。尽管从峰值有所回落，但 73.41% 仍远高于 AI 爆发前的水平。
+
+## Gross Profit / Gross Margin
+
+<br />
+<figure className="flex flex-col items-center">
+  <img src="/invest/income-statement/nvda-gross-profit.png" alt="NVDA Gross Profit" />
+  <figcaption className="text-center text-sm text-gray-500 mt-2">Revenue 减去 Cost of Revenue 得到 Gross Profit（毛利）</figcaption>
+</figure>
+
+<br />
+<figure className="flex flex-col items-center">
+  <img src="/invest/income-statement/nvda-gross-margin.png" alt="NVDA Gross Margin" />
+  <figcaption className="text-center text-sm text-gray-500 mt-2">Gross Margin（毛利率）= Gross Profit / Revenue，英伟达最新一季度为 73.41%</figcaption>
+</figure>
+
+Gross Profit 毛利 = Revenue - Cost of Revenue；Gross Margin 毛利率 = Gross Profit / Revenue。我们会用 Gross Margin + Profit Margin 来评估一家公司的护城河，举例说明下你就明白了：英伟达最新一季度（截至 2025 年 Q3）的 Gross Margin 是 73.41%，而在 AI 爆发前（2023 年 Q1）这个数字仅为 64.63%，AI 爆发期间一度飙升至 78.35%（2024 年 Q1）。过去这两年正是 AI 爆发的时期，英伟达作为卖铲人，GPU 供不应求，能够大肆涨价，体现在财报上则是 Gross Margin 和 Profit Margin 相比 LLM 时代前明显上升。尽管从峰值有所回落，但 73.41% 仍远高于 AI 爆发前的水平。
 
 > Gross Margin / Profit Margin 的明显上升可以体现护城河的加宽，但需要注意，这需要结合商业模式长期观察，一个季度的明显上升可能是由其他因素导致的（比如宏观经济因素）
 
