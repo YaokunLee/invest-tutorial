@@ -1,0 +1,379 @@
+# 案例：如何研究 Alphabet（Google）
+
+> 数据口径：除非特别说明，本文使用 Alphabet 2025 Form 10-K，以及 2026 Q1 财报。Alphabet 的财年等于自然年，2025 财年截止日是 2025 年 12 月 31 日。
+
+Alphabet 也就是 Google 的母公司，是研究互联网平台公司非常好的案例。
+
+它表面上是搜索公司，实际是一家由 **搜索广告、YouTube、Android/Play、订阅、云计算、AI、Other Bets** 共同组成的平台型公司。
+
+如果用一句话概括：
+
+> Alphabet 用 Search、YouTube、Android、Chrome 等产品掌握用户入口和注意力，再通过广告、订阅、应用分发、云服务和 AI 基础设施变现。
+
+这家公司最重要的研究问题是：
+
+1. Search 的护城河有没有被 AI 削弱？
+2. YouTube 还能不能继续增长？
+3. Google Cloud 是否已经从拖累项变成利润引擎？
+4. AI 和 CapEx 会提高长期价值，还是压低自由现金流？
+5. Other Bets，尤其是 Waymo，到底是期权还是烧钱？
+
+## 先看整体：Alphabet 的钱从哪里来
+
+Alphabet 把业务分成三类：
+
+| 业务板块 | 2025 收入 | 同比增速 | 2025 经营利润 | 经营利润率 |
+| --- | ---: | ---: | ---: | ---: |
+| Google Services | $342.7B | +12% | $139.4B | 40.7% |
+| Google Cloud | $58.7B | +36% | $13.9B | 23.7% |
+| Other Bets | $1.5B | -7% | -$7.5B | 不适用 |
+| Alphabet-level activities | - | - | -$16.8B | 不适用 |
+| **合计** | **$402.8B** | **+15%** | **$129.0B** | **32.0%** |
+
+这个表很关键。
+
+很多人还停留在“Google 就是搜索广告”的印象里。但 2025 年，Google Cloud 已经做到 $58.7B 收入，经营利润 $13.9B，已经不是一个小业务。
+
+不过 Google Services 仍然是利润核心。2025 年 Google Services 贡献 $139.4B 经营利润，几乎承担了整个公司的利润基础。
+
+所以研究 Alphabet，要同时看两件事：
+
+1. **Search 和 YouTube 还能不能守住高利润广告盘**
+2. **Cloud 和 AI 能不能成为第二增长曲线**
+
+这张 Q1 2026 highlights 适合放在案例开头，因为它把 Alphabet 当前的几个核心问题放在了一页里：Search 是否还增长、Cloud 是否加速、AI 使用是否扩大、订阅和 Waymo 是否有新进展。
+
+<figure>
+  <img src="/invest/company-cases/alphabet-q1-2026-highlights.png" alt="Alphabet Q1 2026 earnings highlights showing Search, Cloud, AI usage, subscriptions and Waymo" />
+  <figcaption>来源：<a href="https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-slides.pdf">Alphabet Q1 2026 earnings slides</a>。这张图适合用来建立全文的研究框架。</figcaption>
+</figure>
+
+如果只看 highlights 还不够，接着要看总收入和经营利润。下面这张图说明 Alphabet 在 2026 Q1 不只是收入增长，经营利润和经营利润率也同步改善，这比单纯“营收高增长”质量更高。
+
+<figure>
+  <img src="/invest/company-cases/alphabet-q1-2026-revenue-operating-income.png" alt="Alphabet Q1 2026 revenues and operating income chart" />
+  <figcaption>来源：<a href="https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-slides.pdf">Alphabet Q1 2026 earnings slides</a>。重点看收入增长是否带来经营利润率改善。</figcaption>
+</figure>
+
+再看成本和费用。AI 时代的互联网公司不能只看收入端，还要看 cost of revenues、R&D、sales & marketing 是否跟着加速。因为 AI 基础设施、模型研发和数据中心都会体现在这些成本费用里。
+
+<figure>
+  <img src="/invest/company-cases/alphabet-q1-2026-costs-expenses.png" alt="Alphabet Q1 2026 cost of revenues and operating expenses chart" />
+  <figcaption>来源：<a href="https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-slides.pdf">Alphabet Q1 2026 earnings slides</a>。这张图适合用来讲 AI 投入对成本和费用结构的影响。</figcaption>
+</figure>
+
+## 业务线一：Google Search & other
+
+Google Search & other 是 Alphabet 最核心的业务。
+
+2025 年 Google Search & other 收入 $224.5B，比 2024 年增加 $26.4B。Alphabet 在 10-K 中解释，增长来自搜索查询增加、广告主支出增长，以及广告格式和投放效率改善。
+
+到了 2026 Q1，Search & other 收入 $60.4B，同比增长 19%。
+
+这说明一个很重要的事实：**至少到 2026 Q1，AI 并没有把 Google Search 打垮，反而可能在提升搜索使用量和广告效率。**
+
+### Search 为什么是好生意
+
+Search 是非常好的广告生意，因为它抓住的是用户“有明确意图”的时刻。
+
+用户搜索“保险”“贷款”“机票”“附近酒店”“买 iPhone”，背后往往有明确需求。广告主愿意为这种意图付费，因为转化率高。
+
+这和很多信息流广告不同。信息流广告是在用户刷内容时插入广告，而搜索广告是在用户主动表达需求时匹配广告。
+
+所以 Search 的商业价值非常高。
+
+### AI 对 Search 是风险，也是机会
+
+AI 出现后，市场一度担心 Google Search 会被 ChatGPT 替代。
+
+这个担心不是完全没道理。因为如果用户以后直接问 AI，并在 AI 里完成答案获取，传统搜索结果页的点击和广告位可能会受到影响。
+
+但 Google 的优势也很明显：
+
+- 它有最大的搜索流量入口
+- 它有广告主生态
+- 它有 Gemini 和自研模型
+- 它有 Chrome、Android、YouTube 等分发入口
+- 它有长期积累的搜索质量和商业化系统
+
+所以 Google 的策略不是抵抗 AI，而是把 AI 放进 Search：AI Overviews、AI Mode、Gemini，都在试图让 Google 自己完成搜索体验升级。
+
+研究 Alphabet 时，你要持续观察：
+
+- Search 收入是否还能增长
+- 搜索查询量是否增长
+- AI 体验是否提高使用频次
+- 广告加载率和单次查询变现是否变化
+- 用户是否迁移到其他 AI 搜索产品
+
+## 业务线二：YouTube Ads
+
+YouTube Ads 是 Alphabet 的第二大广告资产。
+
+2025 年 YouTube ads 收入 $40.4B，比 2024 年增加 $4.2B。2026 Q1，YouTube ads 收入 $9.9B，同比增长 11%。
+
+YouTube 的价值不只是视频广告收入，它是 Google 在长视频、短视频、电视屏幕、创作者经济和订阅领域的核心入口。
+
+### YouTube 为什么重要
+
+YouTube 有几个特殊优势：
+
+1. **全球视频平台地位强**
+2. **内容供给由创作者持续生产**
+3. **广告和订阅都能变现**
+4. **既能做品牌广告，也能做效果广告**
+5. **YouTube TV、Premium、Music 可以拉动订阅**
+
+这和 Search 不一样。Search 抓住的是需求意图，YouTube 抓住的是用户时长。
+
+所以 Google Services 实际上有两套广告逻辑：
+
+- Search：用户主动搜索，商业意图强
+- YouTube：用户消费内容，广告和订阅双变现
+
+### YouTube 的风险
+
+YouTube 的竞争对手很多：TikTok、Instagram Reels、Netflix、Disney、传统电视广告、流媒体广告等。
+
+如果用户时长被 TikTok 等短视频平台抢走，YouTube 广告增长会承压。如果内容成本和创作者分成上升，利润率也会受影响。
+
+所以研究 YouTube，要看：
+
+- 广告收入增速
+- Shorts 变现能力
+- Premium 和 Music 订阅增长
+- Connected TV 使用时长
+- 内容成本和创作者生态
+
+## 业务线三：Google Network
+
+Google Network 是指 Google 在第三方网站和应用上的广告网络。
+
+2025 年 Google Network 收入 $29.8B，比 2024 年下降 $567M。2026 Q1，Google Network 收入 $7.0B，同比下降 4%。
+
+这个业务和 Search、YouTube 相比，质量要弱一些。
+
+原因是：
+
+- 第三方流量不如 Google 自有产品可控
+- 隐私政策和浏览器变化会影响广告追踪
+- AdSense 等网络广告长期增长弱于 Search 和 YouTube
+- 流量质量和定价权不如自有入口
+
+所以研究 Alphabet 时，不应该把所有广告收入混在一起。Google Network 下滑，不等于 Google 广告护城河整体崩了；但它说明第三方广告网络的质量确实不如 Search 和 YouTube。
+
+## 业务线四：Google subscriptions, platforms, and devices
+
+这个板块包括 Google Play、YouTube 订阅、Google One、Pixel 设备等。
+
+2025 年收入 $48.0B，同比增长 $7.7B。Alphabet 解释，增长主要来自订阅收入，尤其是 YouTube services 和 Google One 的付费订阅增长。
+
+2026 Q1，这个板块收入 $12.4B，同比增长 19%。同时 Alphabet 披露，整体付费订阅达到约 350M。
+
+这个板块很值得重视，因为它代表 Google 正在把一部分收入从广告转向订阅。
+
+广告收入受宏观周期影响较大，而订阅收入更稳定。如果 YouTube Premium、Google One、云存储、AI 订阅、应用平台收入继续增长，Alphabet 的收入结构会更健康。
+
+不过设备业务本身毛利未必很高。Pixel、硬件更多是生态入口，不一定是利润核心。
+
+把 Google Services 拆开看，会发现 Search、YouTube、Network、Subscriptions 的质量并不一样。下面这张图适合放在这一节末尾，提醒读者不要把所有广告和平台收入混成一类。
+
+<figure>
+  <img src="/invest/company-cases/alphabet-q1-2026-google-services.png" alt="Alphabet Q1 2026 Google Services revenue and operating income by business line" />
+  <figcaption>来源：<a href="https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-slides.pdf">Alphabet Q1 2026 earnings slides</a>。重点看 Search、YouTube、Network 和 Subscriptions 的增速差异。</figcaption>
+</figure>
+
+## 业务线五：Google Cloud
+
+Google Cloud 是 Alphabet 当前最重要的第二增长曲线。
+
+2025 年 Google Cloud 收入 $58.7B，同比增长 36%；经营利润 $13.9B，经营利润率 23.7%。这已经不是一个亏损业务。
+
+2026 Q1，Google Cloud 进一步加速：
+
+| 指标 | 2026 Q1 |
+| --- | ---: |
+| Google Cloud 收入 | $20.0B |
+| 同比增速 | +63% |
+| 经营利润 | $6.6B |
+| 经营利润率 | 32.9% |
+| backlog | 超过 $460B |
+
+这个变化非常重要。
+
+过去市场给 Alphabet 估值时，核心是 Search 广告。Cloud 更像是一个投入期业务。但现在 Google Cloud 已经开始贡献明显利润，并且受益于 AI 基础设施、企业 AI Solutions、GCP 核心服务和 Workspace。
+
+这张 Cloud 图最值得看的不是“收入增长快”这一个点，而是收入、经营利润和 backlog 同时改善。一个云业务从亏损转为高利润率增长，估值含义会完全不同。
+
+<figure>
+  <img src="/invest/company-cases/alphabet-q1-2026-google-cloud.png" alt="Alphabet Q1 2026 Google Cloud revenue, operating income and backlog" />
+  <figcaption>来源：<a href="https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-slides.pdf">Alphabet Q1 2026 earnings slides</a>。这张图适合用来讲 Google Cloud 从投入期走向利润贡献期。</figcaption>
+</figure>
+
+### Google 为什么一定要做 Cloud
+
+很多人会问：Google 已经有 Search 这么好的业务，为什么还要烧钱做 Cloud？
+
+原因至少有四个：
+
+1. **企业 AI 需要云作为入口**
+2. **Google 自己有强大的 AI 和数据基础设施能力**
+3. **Cloud 可以把 Google 的技术能力卖给企业客户**
+4. **Cloud 可以降低 Alphabet 对广告的依赖**
+
+Search 是消费互联网入口，Cloud 是企业 AI 入口。Google 如果只守 Search，就会错过企业技术栈的增长。
+
+### Google Cloud 和 Azure/AWS 的区别
+
+AWS 是最早的云龙头，Azure 依托 Microsoft 的企业客户关系，Google Cloud 的优势则更多来自：
+
+- AI 和机器学习能力
+- 数据分析能力
+- Kubernetes 和云原生生态
+- TPU 和自研基础设施
+- Gemini、Vertex AI 等 AI 平台
+- 安全能力，尤其是 Wiz 收购若完成后可能增强云安全版图
+
+Alphabet 2025 年宣布拟以 $32B 收购 Wiz，这是一个很强的信号：Google Cloud 不只想卖算力和数据库，还想补强企业安全能力。
+
+## 业务线六：Other Bets
+
+Other Bets 包括 Waymo 等非 Google 核心业务。
+
+2025 年 Other Bets 收入 $1.5B，经营亏损 $7.5B。亏损里包括 Waymo 相关的员工补偿费用。2026 Q1，Alphabet 披露 Waymo 每周超过 500,000 次完全自动驾驶出行。
+
+Other Bets 对投资者来说，本质上是长期期权。
+
+### 为什么 Alphabet 还要投 Waymo
+
+Waymo 短期不赚钱，但如果自动驾驶出租车真的规模化，它可能成为巨大市场。
+
+不过这里必须冷静：
+
+- 自动驾驶商业化周期长
+- 监管和安全要求高
+- 车辆、运营、保险、维护都很重
+- 城市扩张速度未必快
+- 单位经济模型还需要验证
+
+所以研究 Alphabet 时，不应该把 Waymo 当成当前估值核心。更合理的处理方式是：
+
+> Search 和 Cloud 决定当前主要价值，Waymo 提供长期期权。
+
+## Alphabet 的历史主线
+
+Alphabet 的历史可以分成几个阶段。
+
+### 第一阶段：Search 垄断用户意图
+
+Google 早期通过搜索质量建立用户入口，然后用关键词广告变现。这是互联网历史上最好的商业模式之一：用户主动表达需求，广告主按效果付费。
+
+### 第二阶段：YouTube、Android、Chrome 扩大入口
+
+Google 没有只守搜索。它通过 YouTube 抓住视频时长，通过 Android 抓住移动端入口，通过 Chrome 抓住浏览器入口。
+
+这些产品让 Google 的广告系统有更多流量和数据，也让 Search 不再是唯一入口。
+
+### 第三阶段：Cloud 和订阅补第二曲线
+
+当广告业务体量变大后，继续高速增长会越来越难。Google Cloud 和订阅业务就是第二曲线。
+
+Cloud 面向企业客户，订阅面向消费者和创作者生态。它们能降低广告周期波动带来的影响。
+
+### 第四阶段：AI 重写所有业务
+
+AI 对 Alphabet 同时是风险和机会。
+
+风险在于：如果 AI 搜索改变用户习惯，传统搜索广告可能受影响。
+
+机会在于：Google 有模型、数据、芯片、云、搜索、YouTube、Android、Workspace，可以把 AI 嵌进几乎所有产品。
+
+这就是 Alphabet 当前最重要的投资判断：**AI 会削弱 Google 的入口，还是强化 Google 的全栈能力？**
+
+## 怎么判断 Alphabet 的增长质量
+
+研究 Alphabet，重点看这些指标：
+
+1. Google Search & other 收入增速
+2. YouTube ads 收入增速
+3. Google subscriptions, platforms, and devices 收入增速
+4. Google Cloud 收入增速和经营利润率
+5. TAC rate
+6. CapEx 和自由现金流
+7. AI 对搜索查询量和商业化的影响
+8. 监管罚款和法律成本
+
+其中最重要的是：Search 是否还能增长，以及 Cloud 是否能持续提高利润率。
+
+2025 年 Alphabet 资本开支 $91.4B，主要投向技术基础设施。2026 Q1，资本开支继续大幅增长。这个点必须跟踪，因为 AI 基础设施投入会影响自由现金流。
+
+这张 CapEx 图可以放在风险和增长质量之间。它让读者看到：AI 叙事背后是真实的现金投入，研究 Alphabet 不能只看 Gemini 和 Cloud 收入，也要看数据中心、服务器和网络设备投入是否能转化成未来现金流。
+
+<figure>
+  <img src="/invest/company-cases/alphabet-q1-2026-capex.png" alt="Alphabet Q1 2026 capital expenditures by quarter" />
+  <figcaption>来源：<a href="https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-slides.pdf">Alphabet Q1 2026 earnings slides</a>。这张图适合用来讲 AI CapEx 和自由现金流压力。</figcaption>
+</figure>
+
+CapEx 最后一定要落到自由现金流。下面这张图显示，尽管经营现金流仍然很强，但 property and equipment purchases 大幅增加后，Q1 2026 和 TTM free cash flow 都受到压力。研究 Alphabet 时，这比单看“AI 投资很大”更具体。
+
+<figure>
+  <img src="/invest/company-cases/alphabet-q1-2026-free-cash-flow.png" alt="Alphabet Q1 2026 trailing twelve months free cash flow table" />
+  <figcaption>来源：<a href="https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-slides.pdf">Alphabet Q1 2026 earnings slides</a>。这张图适合用来把 CapEx 压力和自由现金流联系起来。</figcaption>
+</figure>
+
+## Alphabet 的风险
+
+### 1. Search 被 AI 改变
+
+如果用户逐渐从 Google Search 转向 ChatGPT、Perplexity 或其他 AI Agent，Google 的搜索入口会被削弱。
+
+### 2. AI 搜索商业化不确定
+
+AI 回答可能减少传统搜索结果点击，也可能改变广告展示方式。Google 必须证明 AI Search 不会降低长期变现能力。
+
+### 3. CapEx 压力
+
+AI 需要大量数据中心、服务器、TPU/GPU、电力和网络投入。如果收入增长跟不上 CapEx，自由现金流会承压。
+
+### 4. 监管风险
+
+Alphabet 长期面临反垄断、隐私、广告技术、应用商店等监管风险。2025 年报中也可以看到法律和监管相关成本对费用端有明显影响。
+
+### 5. Cloud 竞争
+
+Google Cloud 虽然增长很快，但仍然面对 AWS 和 Azure。企业云迁移不是只看技术，还看销售能力、服务能力、生态和长期客户关系。
+
+## 最后怎么给 Alphabet 下结论
+
+Alphabet 的核心投资逻辑可以总结成一句话：
+
+> 用 Search 和 YouTube 产生高利润现金流，用 Cloud 和 AI 打开第二增长曲线，用 Other Bets 保留长期期权。
+
+它的质量非常高，但关键分歧也很清楚：
+
+1. Search 是否会被 AI 替代，还是被 AI 强化？
+2. Google Cloud 能否持续高增长并提高利润率？
+3. AI CapEx 是否能变成未来收入，而不是长期吞噬自由现金流？
+4. 监管成本是否会侵蚀利润？
+
+如果 Search 保持增长，Cloud 成为稳定利润引擎，那么 Alphabet 就不只是“搜索广告公司”，而是一个广告 + 云 + AI + 订阅的平台型公司。
+
+但如果 AI 破坏搜索商业化，同时 CapEx 持续高企，市场就会重新给它估值。
+
+## 练习
+
+请基于最新财报，自己完成一次 Alphabet 研究：
+
+1. 计算 Google Services、Google Cloud、Other Bets 的收入占比
+2. 计算 Google Services 和 Google Cloud 的经营利润率
+3. 对比 Search、YouTube、Network、Subscriptions 的增速差异
+4. 写出 Google Cloud 为什么可能成为第二增长曲线
+5. 写出 AI 对 Search 的两个机会和两个风险
+6. 分析 CapEx 增长对自由现金流的影响
+7. 最后写一句话：如果你买 Alphabet，你到底在押注什么？
+
+## 数据来源
+
+- [Alphabet 2025 Form 10-K](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm)
+- [Alphabet Q1 2026 Earnings Release](https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-release.pdf)
+- [Alphabet Q1 2026 Earnings Slides](https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/Alphabet-Q1-2026-Earnings-Slides.pdf)

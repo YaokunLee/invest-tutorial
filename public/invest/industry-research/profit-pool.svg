@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">产业利润池示意图</title>
+  <desc id="desc">展示同一个产业链中不同环节的利润厚度不同，投资要关注利润最终沉淀在哪里。</desc>
+  <rect width="1200" height="520" fill="#f8fafc"/>
+  <text x="600" y="54" text-anchor="middle" font-family="Arial, 'PingFang SC', sans-serif" font-size="30" font-weight="700" fill="#0f172a">不要只看需求，要看利润最后沉淀在哪里</text>
+  <text x="600" y="88" text-anchor="middle" font-family="Arial, 'PingFang SC', sans-serif" font-size="16" fill="#475569">同一个行业里，有些环节收入很大但利润薄，有些环节收入没那么大但定价权强</text>
+
+  <g font-family="Arial, 'PingFang SC', sans-serif">
+    <text x="120" y="154" font-size="17" font-weight="700" fill="#334155">产业链环节</text>
+    <text x="420" y="154" font-size="17" font-weight="700" fill="#334155">利润厚度（示意）</text>
+    <text x="880" y="154" font-size="17" font-weight="700" fill="#334155">研究重点</text>
+
+    <line x1="90" y1="176" x2="1110" y2="176" stroke="#cbd5e1" stroke-width="2"/>
+
+    <text x="120" y="224" font-size="18" font-weight="700" fill="#1d4ed8">核心设备 / 制造</text>
+    <rect x="420" y="198" width="430" height="38" rx="19" fill="#2563eb"/>
+    <text x="880" y="224" font-size="16" fill="#475569">技术壁垒、产能、客户集中度</text>
+
+    <text x="120" y="292" font-size="18" font-weight="700" fill="#047857">核心芯片 / 平台</text>
+    <rect x="420" y="266" width="520" height="38" rx="19" fill="#059669"/>
+    <text x="880" y="292" font-size="16" fill="#475569">定价权、生态、替代风险</text>
+
+    <text x="120" y="360" font-size="18" font-weight="700" fill="#b45309">系统集成 / 渠道</text>
+    <rect x="420" y="334" width="260" height="38" rx="19" fill="#f97316"/>
+    <text x="880" y="360" font-size="16" fill="#475569">规模效应、库存、议价能力</text>
+
+    <text x="120" y="428" font-size="18" font-weight="700" fill="#7c3aed">应用 / 终端服务</text>
+    <rect x="420" y="402" width="180" height="38" rx="19" fill="#8b5cf6"/>
+    <text x="880" y="428" font-size="16" fill="#475569">获客成本、留存、商业化能力</text>
+  </g>
+
+  <rect x="86" y="468" width="1028" height="34" rx="17" fill="#e2e8f0"/>
+  <text x="600" y="491" text-anchor="middle" font-family="Arial, 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#334155">投资时要问：客户愿意为谁付高价？谁能持续保留自由现金流？谁只是赚辛苦钱？</text>
+</svg>

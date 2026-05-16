@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">行业生命周期示意图</title>
+  <desc id="desc">行业从导入期、高速成长期、成熟期、衰退期到周期反转期的特征。</desc>
+  <rect width="1200" height="560" fill="#f8fafc"/>
+  <text x="600" y="54" text-anchor="middle" font-family="Arial, 'PingFang SC', sans-serif" font-size="30" font-weight="700" fill="#0f172a">判断行业阶段：同样的增长，不同阶段给不同估值</text>
+  <text x="600" y="88" text-anchor="middle" font-family="Arial, 'PingFang SC', sans-serif" font-size="16" fill="#475569">研究行业时，先判断它是在爆发、成熟、衰退，还是周期底部反转</text>
+
+  <line x1="110" y1="440" x2="1090" y2="440" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="110" y1="440" x2="110" y2="132" stroke="#94a3b8" stroke-width="2"/>
+  <text x="88" y="134" text-anchor="middle" font-family="Arial, 'PingFang SC', sans-serif" font-size="15" fill="#64748b" transform="rotate(-90 88 134)">收入 / 利润</text>
+  <text x="1090" y="474" text-anchor="end" font-family="Arial, 'PingFang SC', sans-serif" font-size="15" fill="#64748b">时间</text>
+
+  <path d="M130 420 C210 410, 250 360, 310 300 C400 210, 510 150, 640 170 C760 188, 860 230, 930 290 C990 342, 1040 386, 1080 418" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+
+  <g font-family="Arial, 'PingFang SC', sans-serif">
+    <rect x="138" y="166" width="172" height="170" rx="16" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="224" y="202" text-anchor="middle" font-size="22" font-weight="700" fill="#1d4ed8">导入期</text>
+    <text x="224" y="238" text-anchor="middle" font-size="15" fill="#334155">故事多，收入小</text>
+    <text x="224" y="266" text-anchor="middle" font-size="15" fill="#334155">赢家还不清楚</text>
+    <text x="224" y="294" text-anchor="middle" font-size="15" fill="#334155">风险最高</text>
+
+    <rect x="356" y="122" width="194" height="170" rx="16" fill="#ecfdf5" stroke="#bbf7d0"/>
+    <text x="453" y="158" text-anchor="middle" font-size="22" font-weight="700" fill="#047857">高速成长期</text>
+    <text x="453" y="194" text-anchor="middle" font-size="15" fill="#334155">需求爆发</text>
+    <text x="453" y="222" text-anchor="middle" font-size="15" fill="#334155">龙头拉开差距</text>
+    <text x="453" y="250" text-anchor="middle" font-size="15" fill="#334155">估值最敏感</text>
+
+    <rect x="604" y="138" width="172" height="170" rx="16" fill="#fff7ed" stroke="#fed7aa"/>
+    <text x="690" y="174" text-anchor="middle" font-size="22" font-weight="700" fill="#b45309">成熟期</text>
+    <text x="690" y="210" text-anchor="middle" font-size="15" fill="#334155">增速放缓</text>
+    <text x="690" y="238" text-anchor="middle" font-size="15" fill="#334155">看利润率</text>
+    <text x="690" y="266" text-anchor="middle" font-size="15" fill="#334155">回购和分红</text>
+
+    <rect x="828" y="194" width="172" height="170" rx="16" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="914" y="230" text-anchor="middle" font-size="22" font-weight="700" fill="#b91c1c">衰退期</text>
+    <text x="914" y="266" text-anchor="middle" font-size="15" fill="#334155">需求下降</text>
+    <text x="914" y="294" text-anchor="middle" font-size="15" fill="#334155">低估值可能陷阱</text>
+    <text x="914" y="322" text-anchor="middle" font-size="15" fill="#334155">少碰弱公司</text>
+
+    <rect x="930" y="374" width="188" height="112" rx="16" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="1024" y="412" text-anchor="middle" font-size="20" font-weight="700" fill="#334155">周期反转</text>
+    <text x="1024" y="446" text-anchor="middle" font-size="15" fill="#475569">利润很差时</text>
+    <text x="1024" y="474" text-anchor="middle" font-size="15" fill="#475569">可能反而有机会</text>
+  </g>
+
+  <circle cx="454" cy="178" r="8" fill="#059669"/>
+  <circle cx="690" cy="190" r="8" fill="#f97316"/>
+  <circle cx="914" cy="284" r="8" fill="#dc2626"/>
+  <circle cx="1048" cy="400" r="8" fill="#64748b"/>
+</svg>

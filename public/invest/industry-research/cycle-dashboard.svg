@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">周期行业观察面板</title>
+  <desc id="desc">判断周期行业时，重点观察库存、价格、资本开支、产能利用率、行业亏损面和龙头资产负债表。</desc>
+  <rect width="1200" height="560" fill="#f8fafc"/>
+  <text x="600" y="54" text-anchor="middle" font-family="Arial, 'PingFang SC', sans-serif" font-size="30" font-weight="700" fill="#0f172a">周期行业不要只看 PE，要看周期位置</text>
+  <text x="600" y="88" text-anchor="middle" font-family="Arial, 'PingFang SC', sans-serif" font-size="16" fill="#475569">存储、光伏、航运、钢铁、大宗商品都需要先判断行业是在高点、下行，还是底部反转</text>
+
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)" font-family="Arial, 'PingFang SC', sans-serif">
+    <rect x="86" y="140" width="300" height="132" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="236" y="184" text-anchor="middle" font-size="22" font-weight="700" fill="#1d4ed8">库存</text>
+    <text x="236" y="220" text-anchor="middle" font-size="16" fill="#475569">库存高，价格通常承压</text>
+    <text x="236" y="248" text-anchor="middle" font-size="16" fill="#475569">库存下降是底部信号之一</text>
+
+    <rect x="450" y="140" width="300" height="132" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="600" y="184" text-anchor="middle" font-size="22" font-weight="700" fill="#047857">价格</text>
+    <text x="600" y="220" text-anchor="middle" font-size="16" fill="#475569">产品价格决定利润弹性</text>
+    <text x="600" y="248" text-anchor="middle" font-size="16" fill="#475569">价格反弹通常先于利润修复</text>
+
+    <rect x="814" y="140" width="300" height="132" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="964" y="184" text-anchor="middle" font-size="22" font-weight="700" fill="#b45309">资本开支</text>
+    <text x="964" y="220" text-anchor="middle" font-size="16" fill="#475569">高景气时扩产最危险</text>
+    <text x="964" y="248" text-anchor="middle" font-size="16" fill="#475569">供给收缩后才有新周期</text>
+
+    <rect x="86" y="326" width="300" height="132" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="236" y="370" text-anchor="middle" font-size="22" font-weight="700" fill="#7c3aed">产能利用率</text>
+    <text x="236" y="406" text-anchor="middle" font-size="16" fill="#475569">利用率提升，利润率修复</text>
+    <text x="236" y="434" text-anchor="middle" font-size="16" fill="#475569">利用率过热，小心供给扩张</text>
+
+    <rect x="450" y="326" width="300" height="132" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="600" y="370" text-anchor="middle" font-size="22" font-weight="700" fill="#be123c">行业亏损面</text>
+    <text x="600" y="406" text-anchor="middle" font-size="16" fill="#475569">亏损面扩大，弱玩家退出</text>
+    <text x="600" y="434" text-anchor="middle" font-size="16" fill="#475569">底部常出现在最难受时</text>
+
+    <rect x="814" y="326" width="300" height="132" rx="18" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="964" y="370" text-anchor="middle" font-size="22" font-weight="700" fill="#334155">资产负债表</text>
+    <text x="964" y="406" text-anchor="middle" font-size="16" fill="#475569">龙头能否熬过低谷</text>
+    <text x="964" y="434" text-anchor="middle" font-size="16" fill="#475569">现金和债务决定生存能力</text>
+  </g>
+
+  <text x="600" y="516" text-anchor="middle" font-family="Arial, 'PingFang SC', sans-serif" font-size="17" font-weight="700" fill="#0f172a">周期股的关键不是“今年 PE 多少”，而是“明后年的利润方向在哪里”。</text>
+</svg>

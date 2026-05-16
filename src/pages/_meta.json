@@ -5,6 +5,10 @@
       "breadcrumb": false
     }
   },
+  "company-research": "如何研究一家公司",
+  "microsoft-case": "案例：如何研究 Microsoft",
+  "alphabet-case": "案例：如何研究 Alphabet（Google）",
+  "industry-research": "如何研究一个行业",
   "dcf": "如何给一家公司估值：DCF",
   "income-statement": "如何读懂收入表（Income Statement）",
   "company-lifecycle": "从收入增速判断公司所处阶段"
