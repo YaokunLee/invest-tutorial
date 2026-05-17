@@ -1,0 +1,335 @@
+import { FinanceTerm } from "../components/term-popover";
+
+# 案例：云厂商 AI CapEx 周期：AI 基建到底是不是泡沫？
+
+> 数据口径：本文根据公司财报、earnings materials 和公开披露数据整理，时间主要覆盖 2023Q1 到 2026Q1。不同公司的 backlog / RPO、CapEx 口径并不完全一致，所以本文更重视趋势和框架，而不是把每个数字当成可以机械比较的精确答案。
+
+AI 爆发之后，市场最常问的一个问题是：
+
+> 云厂商花这么多钱建 AI 基础设施，到底是真需求，还是泡沫？
+
+这个问题不能靠情绪回答。看到 NVIDIA、Microsoft、Google、Amazon、Meta 都在讲 AI，你不能直接说“这一定是新时代”；看到 CapEx 暴涨、自由现金流被压缩，也不能直接说“这一定是泡沫”。
+
+更好的问法是：
+
+1. 云厂商为什么必须提前花钱？
+2. 花出去的钱有没有被客户需求支撑？
+3. CapEx 增长有没有压垮现金流？
+4. 这笔钱流向了产业链的谁？
+5. 哪些信号出现时，AI 基建会从景气周期变成泡沫风险？
+
+这篇文章就用 Microsoft、Google、Amazon、Meta 四家公司做一个完整练习。
+
+## 先给结论：这不是一个简单的“是或不是”
+
+我会把当前阶段理解成：
+
+> AI 基建不是没有真实需求的空气泡沫，但它已经进入了必须严肃验证回报率的 CapEx 周期。
+
+为什么不是简单泡沫？
+
+- 大云厂商的 backlog / RPO 在增长，说明客户合同和未来收入有一定可见度。
+- AI 训练和推理确实需要 GPU、TPU、HBM、网络、存储、数据中心和电力，不是靠软件更新就能完成。
+- Microsoft、Google、Amazon 这些公司本身有很强的经营现金流，可以支撑较高资本开支。
+
+为什么又不能无脑乐观？
+
+- CapEx 是先花钱，收入和利润滞后兑现。
+- AI 服务器、GPU 和数据中心会带来折旧，可能压低未来利润率。
+- 如果客户 AI 应用没有形成稳定付费，云厂商可能会建出利用率不足的产能。
+- 上游供应链景气过热时，云厂商可能为同样的算力支付更高成本。
+
+所以我们不要问“AI 是不是泡沫”这么大的问题，而要拆成一组可以跟踪的指标。
+
+## 为什么 AI 会让 CapEx 突然爆发？
+
+传统云计算已经是重资产业务。云厂商要提前建设数据中心、服务器、存储、网络，然后把算力、数据库、软件服务卖给企业客户。
+
+AI 把这个重资产属性又放大了一层。
+
+一套 AI 基础设施至少需要：
+
+- GPU / TPU / ASIC：负责训练和推理
+- HBM 和存储：承载模型权重、训练数据和推理数据
+- 高速网络：让大量芯片组成集群
+- 数据中心：机柜、散热、供电、备用电源
+- 电力资源：很多地区已经不是“有钱就能马上建”
+- 软件平台：模型服务、开发工具、安全和运维
+
+这就是为什么 AI 不是一个轻资产故事。OpenAI、Anthropic、各类企业 AI 应用的收入增长，背后都要有人先买芯片、建数据中心、签电力和租赁合同。
+
+对云厂商来说，最难的地方在于：**如果你不提前建，客户来了你接不住；但如果你提前建太多，客户没来，你就背上沉重折旧。**
+
+## 第一张图：四大巨头 CapEx 已经明显抬升
+
+先看最直观的图：Microsoft、Google、Amazon、Meta 从 2023Q1 以来的季度 CapEx。
+
+<figure>
+  <img src="/invest/cloud-ai-capex/hyperscaler-capex-with-msft-finance-leases.png" alt="Hyperscaler quarterly and cumulative CapEx from 2023Q1 to 2026Q1" />
+  <figcaption>根据公司财报整理。图中 Microsoft 同时展示现金 CapEx 和包含 finance leases 的口径。</figcaption>
+</figure>
+
+这张图有几个重点：
+
+1. 四家公司都在加速投入，AI 不是某一家公司的孤立行为。
+2. Amazon 的累计 CapEx 最高，但 Amazon 的 CapEx 里不只有 AWS，也包括物流、零售基础设施等投入。
+3. Microsoft 的现金 CapEx 看起来低于 Amazon，但如果把 finance leases 算进去，实际承诺的基础设施投入会更高。
+4. Google 和 Meta 的 CapEx 抬升也很明显，说明搜索、广告、推荐系统和自研模型都需要大量基础设施。
+
+这里要先建立一个常识：CapEx 上升本身不是坏事。对成长型基础设施业务来说，CapEx 是未来收入的前置成本。
+
+真正的问题是：
+
+> CapEx 增长之后，未来收入、利润和现金流能不能跟上？
+
+## 怎么看 CapEx 比率？
+
+单看 CapEx 金额容易误导，因为大公司收入规模不同。更好的做法是看几个比率。
+
+<figure>
+  <img src="/invest/cloud-ai-capex/capex-comparison-2023-onwards.png" alt="CapEx to revenue, net income and EBITDA comparison for META, GOOGL, MSFT and AMZN since 2023" />
+  <figcaption>根据公司财报整理。图中比较了 META、GOOGL、MSFT、AMZN 自 2023Q1 以来的 CapEx / Revenue、CapEx / Net Income、CapEx / EBITDA。</figcaption>
+</figure>
+
+### CapEx / Revenue：资产强度
+
+<FinanceTerm term="CapEx" /> / Revenue 可以理解成：公司每赚 1 美元收入，需要投入多少资本开支。
+
+如果这个比率上升，说明业务变得更重资产。对 AI 云来说，这并不意外，因为 AI 基础设施很贵。
+
+但如果这个比率长期上升，而收入增速没有跟上，就要警惕：公司可能在用越来越重的投入换越来越慢的增长。
+
+### CapEx / EBITDA：经营现金利润能不能承受
+
+CapEx / <FinanceTerm term="EBITDA" /> 可以粗略反映资本开支相对于经营现金利润的压力。
+
+这个指标很适合看 AI 基建周期。因为云厂商不是没收入的创业公司，它们有巨大的经营现金流。问题不是“有没有钱花”，而是“花到什么程度会明显挤压自由现金流”。
+
+如果 CapEx / EBITDA 持续升高，说明公司正在把更多经营成果重新投入基础设施。
+
+### CapEx / Net Income：对股东利润的压力
+
+CapEx / Net Income 更接近普通投资者的直觉：公司赚的钱，有多少又拿去投资了。
+
+但这个指标也最容易被扭曲。净利润会受税率、投资收益、减值、一次性费用影响。比如 Meta 的 Reality Labs 会影响利润口径，所以图里也做了调整口径。
+
+因此这三个比率要一起看，不要只盯一个。
+
+## 第二个问题：有没有客户需求支撑？
+
+判断 AI CapEx 是不是泡沫，不能只看云厂商花了多少钱，还要看未来客户收入有没有可见度。
+
+这里最重要的指标是 backlog / RPO。
+
+- Backlog：已经签约但还没有确认收入的合同金额
+- <FinanceTerm term="RPO" />：Remaining Performance Obligations，剩余履约义务，本质上也是未来待确认收入的一种口径
+
+<figure>
+  <img src="/invest/cloud-ai-capex/cloud-backlog-rpo-2025q1-2026q1.png" alt="Cloud backlog and RPO trend from 2025Q1 to 2026Q1 for AWS, Google Cloud, Microsoft and Oracle" />
+  <figcaption>根据公司公开披露整理。AWS、Google Cloud、Microsoft commercial RPO 和 Oracle RPO 的披露口径不同，适合看趋势，不适合做绝对值的机械横向比较。</figcaption>
+</figure>
+
+从 2025Q1 到 2026Q1，几个大厂的未来收入可见度明显上升：
+
+| 公司 / 口径 | 2025Q1 | 2026Q1 |
+| --- | ---: | ---: |
+| AWS backlog | $189.0B | $364.0B |
+| Google backlog / RPO | $92.4B | $467.6B |
+| Microsoft commercial RPO | $315.0B | $627.0B |
+| Oracle RPO | $130.2B | $552.6B |
+
+这张表至少说明一件事：AI 和云需求不是完全没有合同支撑的故事。
+
+但这里一定要小心。RPO 不等于明年收入，也不等于利润。不同公司合同期限、收入确认节奏、云和非云业务占比都不同。Microsoft commercial RPO 包含更广泛的企业合同，不完全等同于 Azure backlog。
+
+所以我们不把它当精确估值模型，而是把它当作需求温度计。
+
+## Backlog / CapEx：用未来需求覆盖当前投入
+
+更进一步，可以把 backlog / RPO 和 CapEx 放在一起看。
+
+<figure>
+  <img src="/invest/cloud-ai-capex/cloud-backlog-to-capex-ratio-2025q1-2026q1.png" alt="Cloud backlog to CapEx ratio trend from 2025Q1 to 2026Q1" />
+  <figcaption>根据公司公开披露整理。Backlog / CapEx 比率越高，说明未来合同金额相对于当前资本开支越厚；但仍需注意口径差异。</figcaption>
+</figure>
+
+按 2026Q1 的数据计算：
+
+| 公司 / 口径 | Backlog / CapEx |
+| --- | ---: |
+| AWS | 8.2x |
+| Google | 13.1x |
+| Microsoft | 20.3x |
+
+这个指标的直觉很简单：
+
+- 如果 CapEx 暴涨，但 backlog / RPO 没有跟上，风险会上升。
+- 如果 backlog / RPO 增长快于 CapEx，说明至少从合同可见度看，需求还在支撑投入。
+
+它不是完美指标，但非常适合做周期跟踪。
+
+以后每个季度，你可以问自己一句：
+
+> 云厂商新增的未来收入承诺，是否足够支撑新增的基础设施投入？
+
+如果答案连续几个季度变差，就要警惕 AI 基建从景气周期转向过度投资。
+
+## 钱流向了谁：AI CapEx 不是只影响云厂商
+
+云厂商花出去的钱，会变成上游公司的收入。
+
+这个产业链大致可以这样看：
+
+| 产业链环节 | 代表公司 / 资产 | 云厂商视角 |
+| --- | --- | --- |
+| 加速芯片 | NVIDIA、AMD、自研 TPU / ASIC | 最大成本之一，也是性能瓶颈 |
+| HBM / 存储 | SK Hynix、Samsung、Micron | AI 训练和推理需要更高带宽、更大容量 |
+| 晶圆制造 | TSMC | 高端芯片产能约束 |
+| 半导体设备 | ASML、Applied Materials、Lam Research | 扩产周期更长 |
+| 网络和光通信 | Broadcom、Arista、Coherent 等 | 大集群训练需要高速互联 |
+| 数据中心和电力 | 数据中心运营商、公用事业、电力设备 | 供电和散热成为实际约束 |
+
+所以研究 AI CapEx，不能只盯 Microsoft 和 Google，也要看钱流向的上游。
+
+下面这张图用一个粗略方法观察存储供应链：用 Micron、Samsung DS 半导体、SK Hynix 相关收入合计，去和四大云/互联网巨头季度 CapEx 做对比。
+
+<figure>
+  <img src="/invest/cloud-ai-capex/memory-supplier-revenue-vs-hyperscaler-capex-ratio.png" alt="Memory supplier revenue divided by hyperscaler CapEx from 2025Q1 to 2026Q1" />
+  <figcaption>根据公司公开披露整理。这个比率不是说云厂商 CapEx 都流向存储，而是观察 AI 基建周期对存储供应链收入的拉动强度。</figcaption>
+</figure>
+
+这个比率从 2025Q1 的 52.2% 上升到 2026Q1 的 89.2%。
+
+这说明什么？
+
+第一，AI 基建的确在拉动上游收入。HBM、DRAM、企业 SSD、存储服务器都会受益。
+
+第二，上游景气也可能反过来影响云厂商成本。如果存储、GPU、网络设备价格强势，云厂商的 CapEx 同样算力下会更贵，未来云毛利率可能承压。
+
+第三，供应链公司也有周期风险。今天收入爆发，不代表未来永远高增长。只要云厂商订单放缓、价格下跌或库存累积，上游利润可能迅速波动。
+
+这就是产业链研究的价值：同样看好 AI，你要分清楚谁在卖铲子，谁在买铲子，谁在承担折旧。
+
+## Microsoft 的特殊细节：现金 CapEx 可能低估未来承诺
+
+研究 Microsoft 时，还要特别看一个细节：leases not yet commenced，也就是已经签了但还没开始的租赁。
+
+<figure>
+  <img src="/invest/cloud-ai-capex/msft-capex-vs-lease-pipeline.png" alt="Microsoft quarterly cash CapEx versus leases not yet commenced" />
+  <figcaption>根据 Microsoft 财报整理。Microsoft 的基础设施承诺不只体现在当期现金 CapEx 里，也体现在未来租赁管线中。</figcaption>
+</figure>
+
+为什么这个重要？
+
+因为 AI 数据中心不是今天决定、明天上线。很多数据中心容量、电力、机房、设备采购会通过长期合同和租赁安排提前锁定。
+
+如果你只看当期现金 CapEx，可能会低估 Microsoft 已经承诺的未来基础设施投入。
+
+这也是研究重资产科技公司的一个重要习惯：不要只看收入表，也要看现金流量表和资产负债表附注。很多真正重要的承诺，藏在 lease commitments、purchase obligations、remaining performance obligations 这些项目里。
+
+## 2027 压力测试：最多能花到什么程度？
+
+我们还可以进一步做一个 2027 年 CapEx 上限测算。
+
+这个测算不是预测，而是压力测试。它问的是：
+
+> 如果四大巨头继续扩 AI 基建，它们最多能花到什么程度，才会把自由现金流压到接近 0？
+
+方法大致是：
+
+1. 用 2026Q1 operating cash flow 做年化 run-rate。
+2. 根据最新 TTM OCF 增速加上一定 uplift，估算 2027 operating cash flow。
+3. 假设 Max CapEx = OCF，也就是自由现金流接近 0。
+4. 再做一个更激进版本：允许公司动用 50% 现金和短期投资。
+
+结果如下：
+
+| 情景 | 四家公司 2027 Max CapEx 合计 |
+| --- | ---: |
+| OCF 增速 +5pct | $938.5B |
+| OCF 增速 +10pct | $973.2B |
+| OCF 增速 +5pct，且动用 50% 现金和短期投资 | $1,153.2B |
+| OCF 增速 +10pct，且动用 50% 现金和短期投资 | $1,187.9B |
+
+这个表的意义不是说四家公司一定会花到 1 万亿美元，而是告诉你：大厂现金流确实很强，短期内它们有能力继续投入。
+
+但投资者不能只问“有没有能力花”，还要问“花完之后回报率如何”。
+
+如果高 CapEx 带来高收入、高利用率、高毛利率，股东可以接受。  
+如果高 CapEx 只是换来更低自由现金流、更高折旧、更低利润率，那它就会变成估值压力。
+
+## 什么时候不是泡沫？
+
+AI 基建投入如果要被证明是健康周期，需要看到这些信号：
+
+1. Backlog / RPO 继续增长，且增长速度能支撑 CapEx。
+2. 云收入增速维持较高水平，不只是管理层口头说需求强。
+3. AI 相关收入从训练需求扩展到推理和企业应用。
+4. 数据中心利用率提升，而不是大量产能闲置。
+5. 云毛利率虽然短期承压，但中长期没有持续恶化。
+6. 自由现金流在建设高峰后能够恢复。
+7. 客户愿意为 AI 功能持续付费，而不是只做试点。
+
+一句话：不是泡沫的关键证据，是 CapEx 最终变成了可持续收入和现金流。
+
+## 什么时候要警惕泡沫？
+
+相反，如果出现下面这些信号，就要警惕：
+
+1. CapEx 继续大幅增长，但 backlog / RPO 增速放缓。
+2. 云收入增速下降，管理层仍然用“长期需求”解释短期投入。
+3. 云毛利率持续下行，折旧压力越来越大。
+4. AI 应用没有形成足够付费，客户只是试用而不是扩张。
+5. 上游供应链收入过度依赖少数云厂商订单。
+6. 数据中心、电力、GPU 供应缓解后，算力价格快速下跌。
+7. 公司开始牺牲回购、利润率和 FCF，只为了维持 AI 叙事。
+
+真正的泡沫往往不是“没有需求”，而是“价格和投入假设了过于完美的未来”。
+
+2000 年互联网泡沫里，互联网方向本身没有错。错的是很多公司没有商业模式，或者估值提前透支了太多未来。
+
+AI 也类似。AI 可能是真趋势，但真趋势也会有过度投资、估值泡沫和周期回撤。
+
+## 以后每个季度怎么跟踪？
+
+你可以建立一个很简单的跟踪表。
+
+| 指标 | 看什么 | 为什么重要 |
+| --- | --- | --- |
+| CapEx / Revenue | 资产强度有没有继续上升 | 判断业务是否越来越重 |
+| CapEx / OCF | 经营现金流能否覆盖投入 | 判断 FCF 压力 |
+| Backlog / RPO | 未来收入可见度 | 判断需求是否真实 |
+| Backlog / CapEx | 合同需求能否支撑资本开支 | 判断过度建设风险 |
+| 云收入增速 | AWS、Azure、Google Cloud | 判断投入是否转化为收入 |
+| 云毛利率 / 经营利润率 | 利润率是否被 AI 成本侵蚀 | 判断回报质量 |
+| Lease commitments | 已签但未开始的未来承诺 | 判断现金 CapEx 之外的投入 |
+| 上游供应链收入 | GPU、HBM、存储、网络 | 判断钱流向谁，以及周期是否过热 |
+| 电力和数据中心约束 | 建设速度、供电、租赁 | 判断供给瓶颈 |
+
+这个表比喊“AI 是泡沫”或“AI 不是泡沫”有用得多。
+
+投资最重要的不是在口号上站队，而是知道自己要观察什么、什么信号会让你改变判断。
+
+## 小结
+
+这篇文章要带走的核心框架是：
+
+1. AI 基建是重资产周期，CapEx 先发生，收入和利润后兑现。
+2. 判断泡沫不能只看花钱多少，要看 backlog / RPO、云收入、毛利率、FCF 和利用率。
+3. 云厂商的 CapEx 会变成上游供应链收入，所以行业研究必须沿着产业链看。
+4. 大厂现金流很强，短期有能力继续投入，但有能力花钱不等于每一笔投入都有高回报。
+5. AI 可能是真趋势，但真趋势也会出现过度投资和估值泡沫。
+
+如果你是初学者，研究这类问题最好的方式不是预测明年 AI 到底多大，而是每个季度重复问同一组问题：
+
+> 云厂商花出去的钱，是否正在变成可持续的收入、利润和现金流？
+
+只要这个问题回答得越来越清楚，你对 AI 投资的判断就会比大多数只看新闻标题的人更稳。
+
+## 练习
+
+1. 选 Microsoft、Google、Amazon、Meta 中任意一家公司，找出最近一个季度的 CapEx、Revenue、Operating Cash Flow，计算 CapEx / Revenue 和 CapEx / OCF。
+2. 对比 Microsoft 和 Google：谁的 AI CapEx 更依赖云收入增长？谁还有其他现金流业务可以支撑投入？
+3. 选一个上游公司，比如 NVIDIA、Micron、SK Hynix、Broadcom，写清楚它在 AI CapEx 产业链里卖的是什么。
+4. 写三条“AI 基建不是泡沫”的证据，再写三条“AI 基建可能变成泡沫”的风险。
+5. 下个季度财报出来后，更新一次 backlog / CapEx 表，看看趋势有没有变好或变坏。

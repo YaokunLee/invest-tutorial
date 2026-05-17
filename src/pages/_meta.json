@@ -5,10 +5,12 @@
       "breadcrumb": false
     }
   },
+  "investing-vs-trading": "为什么投资不是 Trading（交易）",
   "company-research": "如何研究一家公司",
   "microsoft-case": "案例：如何研究 Microsoft",
   "alphabet-case": "案例：如何研究 Alphabet（Google）",
   "industry-research": "如何研究一个行业",
+  "cloud-ai-capex-cycle": "案例：云厂商 AI CapEx 周期",
   "dcf": "如何给一家公司估值：DCF",
   "income-statement": "如何读懂收入表（Income Statement）",
   "company-lifecycle": "从收入增速判断公司所处阶段"
