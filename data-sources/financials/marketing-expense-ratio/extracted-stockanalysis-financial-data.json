@@ -1,0 +1,208 @@
+{
+  "note": "Extracted from archived StockAnalysis quarterly financial pages. Ratio = abs(sgna) / revenue * 100. This is a broad Selling, General & Admin口径, not pure Selling & Marketing for every company.",
+  "extracted_at": "2026-07-04T12:51:06.689Z",
+  "ecommRows": [
+    {
+      "label": "2024 Q3",
+      "ticker": "BABA",
+      "period_end": "2024-09-30",
+      "revenue": 236503000000,
+      "sgna": 42248000000,
+      "sgna_to_revenue_pct": 17.86
+    },
+    {
+      "label": "2024 Q4",
+      "ticker": "BABA",
+      "period_end": "2024-12-31",
+      "revenue": 280154000000,
+      "sgna": 53526000000,
+      "sgna_to_revenue_pct": 19.11
+    },
+    {
+      "label": "2025 Q1",
+      "ticker": "BABA",
+      "period_end": "2025-03-31",
+      "revenue": 236454000000,
+      "sgna": 46510000000,
+      "sgna_to_revenue_pct": 19.67
+    },
+    {
+      "label": "2025 Q2",
+      "ticker": "BABA",
+      "period_end": "2025-06-30",
+      "revenue": 247652000000,
+      "sgna": 60576000000,
+      "sgna_to_revenue_pct": 24.46
+    },
+    {
+      "label": "2025 Q3",
+      "ticker": "BABA",
+      "period_end": "2025-09-30",
+      "revenue": 247795000000,
+      "sgna": 73876000000,
+      "sgna_to_revenue_pct": 29.81
+    },
+    {
+      "label": "2024 Q3",
+      "ticker": "PDD",
+      "period_end": "2024-09-30",
+      "revenue": 99354400000,
+      "sgna": 32289400000,
+      "sgna_to_revenue_pct": 32.5
+    },
+    {
+      "label": "2024 Q4",
+      "ticker": "PDD",
+      "period_end": "2024-12-31",
+      "revenue": 110610000000,
+      "sgna": 33442300000,
+      "sgna_to_revenue_pct": 30.23
+    },
+    {
+      "label": "2025 Q1",
+      "ticker": "PDD",
+      "period_end": "2025-03-31",
+      "revenue": 95672000000,
+      "sgna": 35062000000,
+      "sgna_to_revenue_pct": 36.65
+    },
+    {
+      "label": "2025 Q2",
+      "ticker": "PDD",
+      "period_end": "2025-06-30",
+      "revenue": 103985000000,
+      "sgna": 28741700000,
+      "sgna_to_revenue_pct": 27.64
+    },
+    {
+      "label": "2025 Q3",
+      "ticker": "PDD",
+      "period_end": "2025-09-30",
+      "revenue": 108277000000,
+      "sgna": 32078300000,
+      "sgna_to_revenue_pct": 29.63
+    },
+    {
+      "label": "2024 Q3",
+      "ticker": "JD",
+      "period_end": "2024-09-30",
+      "revenue": 260387000000,
+      "sgna": 28603000000,
+      "sgna_to_revenue_pct": 10.98
+    },
+    {
+      "label": "2024 Q4",
+      "ticker": "JD",
+      "period_end": "2024-12-31",
+      "revenue": 346986000000,
+      "sgna": 39408000000,
+      "sgna_to_revenue_pct": 11.36
+    },
+    {
+      "label": "2025 Q1",
+      "ticker": "JD",
+      "period_end": "2025-03-31",
+      "revenue": 301082000000,
+      "sgna": 32694000000,
+      "sgna_to_revenue_pct": 10.86
+    },
+    {
+      "label": "2025 Q2",
+      "ticker": "JD",
+      "period_end": "2025-06-30",
+      "revenue": 356660000000,
+      "sgna": 52424000000,
+      "sgna_to_revenue_pct": 14.7
+    },
+    {
+      "label": "2025 Q3",
+      "ticker": "JD",
+      "period_end": "2025-09-30",
+      "revenue": 299059000000,
+      "sgna": 46042000000,
+      "sgna_to_revenue_pct": 15.4
+    },
+    {
+      "label": "2024 Q3",
+      "ticker": "Meituan",
+      "period_end": "2024-09-30",
+      "revenue": 93577319000,
+      "sgna": 20750923000,
+      "sgna_to_revenue_pct": 22.18
+    },
+    {
+      "label": "2024 Q4",
+      "ticker": "Meituan",
+      "period_end": "2024-12-31",
+      "revenue": 88487296000,
+      "sgna": 20239511000,
+      "sgna_to_revenue_pct": 22.87
+    },
+    {
+      "label": "2025 Q1",
+      "ticker": "Meituan",
+      "period_end": "2025-03-31",
+      "revenue": 86206145000,
+      "sgna": 17826052000,
+      "sgna_to_revenue_pct": 20.68
+    },
+    {
+      "label": "2025 Q2",
+      "ticker": "Meituan",
+      "period_end": "2025-06-30",
+      "revenue": 91840480000,
+      "sgna": 25197863000,
+      "sgna_to_revenue_pct": 27.44
+    },
+    {
+      "label": "2025 Q3",
+      "ticker": "Meituan",
+      "period_end": "2025-09-30",
+      "revenue": 95488113000,
+      "sgna": 37224630000,
+      "sgna_to_revenue_pct": 38.98
+    }
+  ],
+  "nvdaRows": [
+    {
+      "label": "2024 Q3",
+      "ticker": "NVDA",
+      "period_end": "2024-10-27",
+      "revenue": 35082000000,
+      "sgna": 897000000,
+      "sgna_to_revenue_pct": 2.56
+    },
+    {
+      "label": "2024 Q4",
+      "ticker": "NVDA",
+      "period_end": "2025-01-26",
+      "revenue": 39331000000,
+      "sgna": 975000000,
+      "sgna_to_revenue_pct": 2.48
+    },
+    {
+      "label": "2025 Q1",
+      "ticker": "NVDA",
+      "period_end": "2025-04-27",
+      "revenue": 44062000000,
+      "sgna": 1041000000,
+      "sgna_to_revenue_pct": 2.36
+    },
+    {
+      "label": "2025 Q2",
+      "ticker": "NVDA",
+      "period_end": "2025-07-27",
+      "revenue": 46743000000,
+      "sgna": 1122000000,
+      "sgna_to_revenue_pct": 2.4
+    },
+    {
+      "label": "2025 Q3",
+      "ticker": "NVDA",
+      "period_end": "2025-10-26",
+      "revenue": 57006000000,
+      "sgna": 1134000000,
+      "sgna_to_revenue_pct": 1.99
+    }
+  ]
+}

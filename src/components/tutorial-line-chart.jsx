@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
 const DEFAULT_COLORS = ["#2563eb", "#dc2626", "#059669", "#d97706", "#7c3aed"];
 
@@ -23,10 +23,32 @@ const TutorialLineChart = ({
   valueFormatter,
 }) => {
   const [Recharts, setRecharts] = useState(null);
+  const chartAreaRef = useRef(null);
+  const [chartWidth, setChartWidth] = useState(0);
 
   useEffect(() => {
     import("recharts").then((mod) => setRecharts(mod));
   }, []);
+
+  useEffect(() => {
+    const chartArea = chartAreaRef.current;
+    if (!chartArea) return undefined;
+
+    const updateWidth = () => {
+      setChartWidth(Math.max(0, Math.floor(chartArea.getBoundingClientRect().width)));
+    };
+
+    updateWidth();
+
+    if (typeof ResizeObserver === "undefined") {
+      window.addEventListener("resize", updateWidth);
+      return () => window.removeEventListener("resize", updateWidth);
+    }
+
+    const observer = new ResizeObserver(updateWidth);
+    observer.observe(chartArea);
+    return () => observer.disconnect();
+  }, [Recharts]);
 
   const normalizedSeries = useMemo(
     () =>
@@ -54,7 +76,6 @@ const TutorialLineChart = ({
   }
 
   const {
-    ResponsiveContainer,
     LineChart,
     Line,
     XAxis,
@@ -90,6 +111,10 @@ const TutorialLineChart = ({
     );
   };
 
+  const fallbackChartWidth =
+    typeof window === "undefined" ? 620 : Math.max(320, Math.min(620, window.innerWidth - 64));
+  const effectiveChartWidth = chartWidth || fallbackChartWidth;
+
   return (
     <figure className="my-8">
       <div className="rounded border border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-950">
@@ -103,42 +128,45 @@ const TutorialLineChart = ({
             {subtitle}
           </div>
         ) : null}
-        <div className="mt-4" style={{ width: "100%", height }}>
-          <ResponsiveContainer>
-            <LineChart data={data} margin={{ top: 10, right: 24, bottom: 8, left: 8 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-              <XAxis
-                dataKey={xKey}
-                tick={{ fontSize: 12, fill: "#64748b" }}
-                tickLine={false}
-                axisLine={{ stroke: "#cbd5e1" }}
-                minTickGap={18}
+        <div ref={chartAreaRef} className="mt-4" style={{ width: "100%", height }}>
+          <LineChart
+            width={effectiveChartWidth}
+            height={height}
+            data={data}
+            margin={{ top: 10, right: 24, bottom: 8, left: 8 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+            <XAxis
+              dataKey={xKey}
+              tick={{ fontSize: 12, fill: "#64748b" }}
+              tickLine={false}
+              axisLine={{ stroke: "#cbd5e1" }}
+              minTickGap={18}
+            />
+            <YAxis
+              domain={yDomain || ["auto", "auto"]}
+              tick={{ fontSize: 12, fill: "#64748b" }}
+              tickLine={false}
+              axisLine={{ stroke: "#cbd5e1" }}
+              tickFormatter={(value) => formatValue(value)}
+            />
+            <Tooltip content={<CustomTooltip />} />
+            <Legend verticalAlign="top" height={28} />
+            {normalizedSeries.map((item) => (
+              <Line
+                key={item.key}
+                type="monotone"
+                dataKey={item.key}
+                name={item.name}
+                stroke={item.color}
+                strokeWidth={2.5}
+                dot={{ r: 4, strokeWidth: 2, fill: "#fff" }}
+                activeDot={{ r: 6, strokeWidth: 2 }}
+                connectNulls={false}
+                isAnimationActive={false}
               />
-              <YAxis
-                domain={yDomain || ["auto", "auto"]}
-                tick={{ fontSize: 12, fill: "#64748b" }}
-                tickLine={false}
-                axisLine={{ stroke: "#cbd5e1" }}
-                tickFormatter={(value) => formatValue(value)}
-              />
-              <Tooltip content={<CustomTooltip />} />
-              <Legend verticalAlign="top" height={28} />
-              {normalizedSeries.map((item) => (
-                <Line
-                  key={item.key}
-                  type="monotone"
-                  dataKey={item.key}
-                  name={item.name}
-                  stroke={item.color}
-                  strokeWidth={2.5}
-                  dot={{ r: 4, strokeWidth: 2, fill: "#fff" }}
-                  activeDot={{ r: 6, strokeWidth: 2 }}
-                  connectNulls={false}
-                  isAnimationActive={false}
-                />
-              ))}
-            </LineChart>
-          </ResponsiveContainer>
+            ))}
+          </LineChart>
         </div>
       </div>
       {caption ? (

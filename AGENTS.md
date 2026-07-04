@@ -23,6 +23,12 @@ Co-Authored-By: (the agent model's name and attribution byline)
 - Do not fabricate book quotes, page numbers, chapters, company filings, dates, financial figures, or source attributions.
 - After modifying files under `/Users/mac/Myfiles/invest/opportunities/`, check whether `/Users/mac/Myfiles/invest/opportunities/INDEX.md` needs an update.
 
+## Financial Data APIs
+- SimFin API keys must be stored locally in `.env.local` as `SIMFIN_API_KEY`; never write the key into `AGENTS.md`, `CLAUDE.md`, source files, article text, or committed data files.
+- `.env*.local` is ignored by git. Keep `.env.local` permission-restricted when possible, for example `chmod 600 .env.local`.
+- SimFin API v3 uses the `Authorization` request header. For financial statements, use `https://backend.simfin.com/api/v3/companies/statements/compact` with parameters such as `ticker=MU`, `statements=pl`, `period=fy`, and a date range.
+- When using SimFin data in articles, save derived working data under `data-sources/`, cite SimFin as the source, and state any calculation formula such as `Gross Margin = Gross Profit / Revenue`.
+
 ## Audience And Style
 - Write for readers without finance or investor background.
 - When mentioning foreign investors, funds, companies, or books, use the common Chinese name first.

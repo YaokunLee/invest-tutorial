@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-07-04T12:57:53.121452949",
+  "status": "500",
+  "error": "Failed to convert value of type 'java.lang.String' to required type 'java.util.List'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@io.swagger.v3.oas.annotations.Parameter @org.springframework.web.bind.annotation.RequestParam simfin.library.domain.enums.Period] for value 'quarters'; nested exception is java.lang.IllegalArgumentException: No enum constant simfin.library.domain.enums.Period.quarters",
+  "message": "Failed to convert value of type 'java.lang.String' to required type 'java.util.List'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@io.swagger.v3.oas.annotations.Parameter @org.springframework.web.bind.annotation.RequestParam simfin.library.domain.enums.Period] for value 'quarters'; nested exception is java.lang.IllegalArgumentException: No enum constant simfin.library.domain.enums.Period.quarters"
+}

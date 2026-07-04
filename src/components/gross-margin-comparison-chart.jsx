@@ -18,7 +18,6 @@ const grossMarginData = [
 const GrossMarginComparisonChart = () => (
   <TutorialLineChart
     title="AMD vs NVDA Gross Margin"
-    subtitle="按近似日历季度对齐；鼠标悬停在折线点上可查看具体数值。"
     data={grossMarginData}
     xKey="quarter"
     yDomain={[40, 82]}
