@@ -1,4 +1,5 @@
-import { useId } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 const TERM_DEFINITIONS = {
   ARR: "Annual Recurring Revenue，年度经常性收入。常用于 SaaS 公司，表示按当前订阅规模年化后，一年大概能重复获得多少收入。",
@@ -61,22 +62,78 @@ export function ArpuTerm() {
 
 export default function TermPopover({ term, children }) {
   const id = useId();
+  const triggerRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [position, setPosition] = useState(null);
+
+  const updatePosition = useCallback(() => {
+    if (!triggerRef.current) {
+      return;
+    }
+
+    const rect = triggerRef.current.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const popoverWidth = Math.min(320, viewportWidth - 32);
+    const left = Math.min(
+      Math.max(rect.left + rect.width / 2, popoverWidth / 2 + 16),
+      viewportWidth - popoverWidth / 2 - 16
+    );
+    const showBelow = rect.top < 120 && viewportHeight - rect.bottom > rect.top;
+
+    setPosition({
+      left,
+      top: showBelow ? rect.bottom + 8 : rect.top - 8,
+      transform: showBelow ? "translate(-50%, 0)" : "translate(-50%, -100%)",
+      width: popoverWidth,
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!isOpen) {
+      return undefined;
+    }
+
+    updatePosition();
+    const closeOnScroll = () => setIsOpen(false);
+    window.addEventListener("resize", updatePosition);
+    window.addEventListener("scroll", closeOnScroll, {
+      capture: true,
+      once: true,
+    });
+
+    return () => {
+      window.removeEventListener("resize", updatePosition);
+      window.removeEventListener("scroll", closeOnScroll, true);
+    };
+  }, [isOpen, updatePosition]);
 
   return (
-    <span className="group relative inline-flex">
+    <span className="inline-flex">
       <button
+        ref={triggerRef}
         type="button"
         className="cursor-help border-b border-dotted border-blue-500 text-blue-600 dark:text-blue-400"
         aria-describedby={id}
+        onMouseEnter={() => setIsOpen(true)}
+        onMouseLeave={() => setIsOpen(false)}
+        onFocus={() => setIsOpen(true)}
+        onBlur={() => setIsOpen(false)}
       >
         {term}
       </button>
-      <span
-        id={id}
-        className="absolute bottom-full left-1/2 z-50 mb-2 hidden w-64 -translate-x-1/2 rounded-md border border-gray-200 bg-white px-3 py-2 text-left text-sm leading-6 text-gray-700 shadow-lg group-hover:block group-focus-within:block dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200"
-      >
-        {children}
-      </span>
+      {isOpen &&
+        position &&
+        createPortal(
+          <span
+            id={id}
+            className="pointer-events-none fixed z-[1000] rounded-md border border-gray-200 bg-white px-3 py-2 text-left text-sm leading-6 text-gray-700 shadow-lg dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200"
+            style={position}
+          >
+            {children}
+          </span>,
+          document.body
+        )}
     </span>
   );
 }

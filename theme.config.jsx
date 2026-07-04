@@ -1,4 +1,18 @@
 import { useRouter } from "next/router";
+import ZoomableImage from "./src/components/zoomable-image";
+
+function AssetImage({ src = "", ...props }) {
+  const { basePath } = useRouter();
+  const resolvedSrc =
+    typeof src === "string" &&
+    basePath &&
+    src.startsWith("/") &&
+    !src.startsWith(`${basePath}/`)
+      ? `${basePath}${src}`
+      : src;
+
+  return <ZoomableImage src={resolvedSrc} {...props} />;
+}
 
 const metaTags = (
   <>
@@ -29,6 +43,10 @@ const config = {
   },
   toc: {
     backToTop: true,
+  },
+  components: {
+    AssetImage,
+    img: AssetImage,
   },
   editLink: { component: () => null },
   feedback: { content: null },
